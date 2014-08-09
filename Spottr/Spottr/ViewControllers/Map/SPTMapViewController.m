@@ -25,16 +25,6 @@
 
     UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewWorkoutTapped:)];
     [self.navigationItem setRightBarButtonItem:addBarButtonItem];
-
-    PFQuery *query = [PFQuery queryWithClassName:@"Workout"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        for (PFObject *object in objects) {
-            SPTWorkout *workout = [SPTWorkout workoutWithParseObject:object];
-            NSLog(@"created workout");
-        }
-        NSLog(@"Derp");
-
-    }];
 }
 
 - (void)addNewWorkoutTapped:(id)sender
