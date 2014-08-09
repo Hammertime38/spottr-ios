@@ -67,15 +67,23 @@
     [backingParseObject setObject:@(self.capacity) forKey:@"capacity"];
     [backingParseObject setObject:@(self.latitude) forKey:@"latitude"];
     [backingParseObject setObject:@(self.longitude) forKey:@"longitude"];
+    __block NSArray *workoutsJoined;
     if (![backingParseObject objectForKey:@"createdBy"]) {
         [backingParseObject setObject:[PFUser currentUser] forKey:@"createdBy"];
-        [[backingParseObject relationForKey:@"joinedUsers"] addObject:[PFUser currentUser] ];
+        [[backingParseObject relationForKey:@"joinedUsers"] addObject:[PFUser currentUser]];
+        workoutsJoined = [[PFUser currentUser] objectForKey:@"workoutsJoined"] ?: @[];
+
         [backingParseObject setObject:@1 forKey:@"numUsersJoined"];
         [backingParseObject setObject:[[PFUser currentUser] objectForKey:@"firstName"] forKey:@"createdByFirstName"];
         [backingParseObject setObject:[[PFUser currentUser] objectForKey:@"lastName"] forKey:@"createdByLastName"];
     }
     [backingParseObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            if (workoutsJoined && ![workoutsJoined containsObject:backingParseObject.objectId]) {
+                workoutsJoined = [workoutsJoined arrayByAddingObject:backingParseObject.objectId];
+                [[PFUser currentUser] setObject:workoutsJoined forKey:@"workoutsJoined"];
+                [[PFUser currentUser] save];
+            }
             if (completion) completion(error, @(succeeded));
         });
     }];
