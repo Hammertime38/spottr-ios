@@ -24,14 +24,19 @@
     [super viewDidLoad];
 
     SPTMapViewController *mapViewController = [SPTMapViewController new];
+    UINavigationController *mapNavigationController = [[UINavigationController alloc] initWithRootViewController:mapViewController];
     SPTWorkoutListTableViewController *workoutListViewController = [SPTWorkoutListTableViewController new];
+    UINavigationController *workoutListNavigationController = [[UINavigationController alloc] initWithRootViewController:workoutListViewController];
     SPTProfileViewController *profileViewController = [SPTProfileViewController new];
 
-    [mapViewController.tabBarItem setImage:[UIImage imageNamed:@"SPTMapTabIcon"]];
-    [workoutListViewController.tabBarItem setImage:[UIImage imageNamed:@"SPTListTabIcon"]];
+    [mapNavigationController.navigationBar setTranslucent:YES];
+    [workoutListNavigationController.navigationBar setTranslucent:YES];
+
+    [mapNavigationController.tabBarItem setImage:[UIImage imageNamed:@"SPTMapTabIcon"]];
+    [workoutListNavigationController.tabBarItem setImage:[UIImage imageNamed:@"SPTListTabIcon"]];
     [profileViewController.tabBarItem setImage:[UIImage imageNamed:@"SPTProfileTabIcon"]];
 
-    [self setViewControllers:@[mapViewController, workoutListViewController, profileViewController]];
+    [self setViewControllers:@[mapNavigationController, workoutListNavigationController, profileViewController]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
