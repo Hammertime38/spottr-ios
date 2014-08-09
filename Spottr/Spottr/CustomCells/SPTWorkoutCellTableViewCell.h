@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class SPTWorkout;
 @interface SPTWorkoutCellTableViewCell : UITableViewCell
-
+- (void)configureWithWorkout:(SPTWorkout *)workout;
 @end

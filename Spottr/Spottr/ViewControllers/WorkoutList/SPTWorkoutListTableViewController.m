@@ -8,9 +8,12 @@
 
 #import "SPTWorkoutListTableViewController.h"
 #import "SPTCreateWorkoutController.h"
+#import "SPTWorkoutCellTableViewCell.h"
+#import "SPTWorkout.h"
+#import <Parse/Parse.h>
 
 @interface SPTWorkoutListTableViewController ()
-
+@property (nonatomic) NSArray *workouts;
 @end
 
 @implementation SPTWorkoutListTableViewController
@@ -19,9 +22,32 @@
 {
     [super viewDidLoad];
 
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SPTWorkoutCellTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"workoutCell"];
+    UIRefreshControl *refreshControl = [UIRefreshControl new];
+    [refreshControl addTarget:self action:@selector(reloadWorkouts) forControlEvents:UIControlEventValueChanged];
+    [self setRefreshControl:refreshControl];
+
     //Literally copy and pasted the following 20 lines of code <3
     UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewWorkoutTapped:)];
     [self.navigationItem setRightBarButtonItem:addBarButtonItem];
+
+    [self reloadWorkouts];
+}
+
+- (void)reloadWorkouts
+{
+    __weak typeof(self) weakSelf = self;
+    [[PFQuery queryWithClassName:@"Workout"] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSMutableArray *workouts = [NSMutableArray arrayWithCapacity:objects.count];
+        for (PFObject *object in objects) {
+            [workouts addObject:[SPTWorkout workoutWithParseObject:object]];
+        }
+        [weakSelf setWorkouts:[workouts copy]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.refreshControl endRefreshing];
+            [weakSelf.tableView reloadData];
+        });
+    }];
 }
 
 - (void)addNewWorkoutTapped:(id)sender
@@ -49,28 +75,32 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.workouts.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    SPTWorkoutCellTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"workoutCell"];
+
+    if (!cell) {
+        cell = [[SPTWorkoutCellTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"workoutCell"];
+    }
+
+    [cell configureWithWorkout:self.workouts[indexPath.row]];
+
     return cell;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Magic :)
+    return 102;
+}
 
 /*
 // Override to support conditional editing of the table view.
