@@ -21,7 +21,8 @@
 
 @implementation SPTWorkoutCellTableViewCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     [self.activityImageView.layer setCornerRadius:self.activityImageView.frame.size.height/2];
     [self.activityImageView.layer setMasksToBounds:YES];
 }
