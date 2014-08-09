@@ -39,8 +39,6 @@
 		1B327D7B1995BE980089E5BA /* SPTMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B327D7A1995BE980089E5BA /* SPTMainTabBarController.m */; };
 		1B327D801995BED60089E5BA /* SPTWorkoutListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B327D7E1995BED60089E5BA /* SPTWorkoutListTableViewController.m */; };
 		1B327D811995BED60089E5BA /* SPTWorkoutListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B327D7F1995BED60089E5BA /* SPTWorkoutListTableViewController.xib */; };
-		1B327D861995C0070089E5BA /* SPTCreateWorkoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B327D841995C0070089E5BA /* SPTCreateWorkoutTableViewController.m */; };
-		1B327D871995C0070089E5BA /* SPTCreateWorkoutTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B327D851995C0070089E5BA /* SPTCreateWorkoutTableViewController.xib */; };
 		1B327D8C1995C1190089E5BA /* SPTWorkoutDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B327D8A1995C1190089E5BA /* SPTWorkoutDetailsViewController.m */; };
 		1B327D8D1995C1190089E5BA /* SPTWorkoutDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B327D8B1995C1190089E5BA /* SPTWorkoutDetailsViewController.xib */; };
 		1B39051E1995F4860084CE57 /* SPTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B39051C1995F4860084CE57 /* SPTSignUpViewController.m */; };
@@ -53,6 +51,8 @@
 		2F22755E19961235004CFF9A /* SPTLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755A19961235004CFF9A /* SPTLogo@2x.png */; };
 		2F22755F19961235004CFF9A /* SPTTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755B19961235004CFF9A /* SPTTitle.png */; };
 		2F22756019961235004CFF9A /* SPTTitle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755C19961235004CFF9A /* SPTTitle@2x.png */; };
+		2F227565199615E3004CFF9A /* SPTCreateWorkoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F227563199615E3004CFF9A /* SPTCreateWorkoutController.m */; };
+		2F227566199615E3004CFF9A /* SPTCreateWorkoutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F227564199615E3004CFF9A /* SPTCreateWorkoutController.xib */; };
 		C0B430FAE3B14898B4B189CB /* libPods-Spottr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F69D72784472414EA1FCFC33 /* libPods-Spottr.a */; };
 /* End PBXBuildFile section */
 
@@ -111,9 +111,6 @@
 		1B327D7D1995BED60089E5BA /* SPTWorkoutListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTWorkoutListTableViewController.h; sourceTree = "<group>"; };
 		1B327D7E1995BED60089E5BA /* SPTWorkoutListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTWorkoutListTableViewController.m; sourceTree = "<group>"; };
 		1B327D7F1995BED60089E5BA /* SPTWorkoutListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTWorkoutListTableViewController.xib; sourceTree = "<group>"; };
-		1B327D831995C0070089E5BA /* SPTCreateWorkoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTCreateWorkoutTableViewController.h; sourceTree = "<group>"; };
-		1B327D841995C0070089E5BA /* SPTCreateWorkoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTCreateWorkoutTableViewController.m; sourceTree = "<group>"; };
-		1B327D851995C0070089E5BA /* SPTCreateWorkoutTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTCreateWorkoutTableViewController.xib; sourceTree = "<group>"; };
 		1B327D891995C1190089E5BA /* SPTWorkoutDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTWorkoutDetailsViewController.h; sourceTree = "<group>"; };
 		1B327D8A1995C1190089E5BA /* SPTWorkoutDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTWorkoutDetailsViewController.m; sourceTree = "<group>"; };
 		1B327D8B1995C1190089E5BA /* SPTWorkoutDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTWorkoutDetailsViewController.xib; sourceTree = "<group>"; };
@@ -129,6 +126,9 @@
 		2F22755A19961235004CFF9A /* SPTLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTLogo@2x.png"; sourceTree = "<group>"; };
 		2F22755B19961235004CFF9A /* SPTTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTTitle.png; sourceTree = "<group>"; };
 		2F22755C19961235004CFF9A /* SPTTitle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTTitle@2x.png"; sourceTree = "<group>"; };
+		2F227562199615E3004CFF9A /* SPTCreateWorkoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTCreateWorkoutController.h; sourceTree = "<group>"; };
+		2F227563199615E3004CFF9A /* SPTCreateWorkoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTCreateWorkoutController.m; sourceTree = "<group>"; };
+		2F227564199615E3004CFF9A /* SPTCreateWorkoutController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTCreateWorkoutController.xib; sourceTree = "<group>"; };
 		F69D72784472414EA1FCFC33 /* libPods-Spottr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spottr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -312,9 +312,9 @@
 		1B327D5B1995BD770089E5BA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2F227561199615C6004CFF9A /* CreateWorkout */,
 				1B39051A1995F47C0084CE57 /* SignUp */,
 				1B327D881995C0DD0089E5BA /* WorkoutDetails */,
-				1B327D821995BFF00089E5BA /* CreateWorkout */,
 				1B327D7C1995BEB90089E5BA /* WorkoutList */,
 				1B327D781995BE880089E5BA /* Main */,
 				1B327D5D1995BDB40089E5BA /* Login */,
@@ -373,16 +373,6 @@
 			path = WorkoutList;
 			sourceTree = "<group>";
 		};
-		1B327D821995BFF00089E5BA /* CreateWorkout */ = {
-			isa = PBXGroup;
-			children = (
-				1B327D831995C0070089E5BA /* SPTCreateWorkoutTableViewController.h */,
-				1B327D841995C0070089E5BA /* SPTCreateWorkoutTableViewController.m */,
-				1B327D851995C0070089E5BA /* SPTCreateWorkoutTableViewController.xib */,
-			);
-			path = CreateWorkout;
-			sourceTree = "<group>";
-		};
 		1B327D881995C0DD0089E5BA /* WorkoutDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +391,16 @@
 				1B39051D1995F4860084CE57 /* SPTSignUpViewController.xib */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		2F227561199615C6004CFF9A /* CreateWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				2F227562199615E3004CFF9A /* SPTCreateWorkoutController.h */,
+				2F227563199615E3004CFF9A /* SPTCreateWorkoutController.m */,
+				2F227564199615E3004CFF9A /* SPTCreateWorkoutController.xib */,
+			);
+			path = CreateWorkout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,7 +481,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B327D871995C0070089E5BA /* SPTCreateWorkoutTableViewController.xib in Resources */,
 				2F22755719960D5C004CFF9A /* SPTAddPhotoPlaceholder.png in Resources */,
 				1B327D651995BDC10089E5BA /* SPTLoginViewController.xib in Resources */,
 				2F227552199609D3004CFF9A /* SPTMapAnnotationIcon.png in Resources */,
@@ -499,6 +498,7 @@
 				1B0846C71995EB650055CDCE /* SPTProfileTabIcon.png in Resources */,
 				1B39051F1995F4860084CE57 /* SPTSignUpViewController.xib in Resources */,
 				1B0846C31995EB650055CDCE /* SPTListTabIcon.png in Resources */,
+				2F227566199615E3004CFF9A /* SPTCreateWorkoutController.xib in Resources */,
 				1B327D2D1995B5E10089E5BA /* InfoPlist.strings in Resources */,
 				2F22755419960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png in Resources */,
 				1B327D351995B5E10089E5BA /* Images.xcassets in Resources */,
@@ -556,13 +556,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F227565199615E3004CFF9A /* SPTCreateWorkoutController.m in Sources */,
 				1B327D801995BED60089E5BA /* SPTWorkoutListTableViewController.m in Sources */,
 				1B327D7B1995BE980089E5BA /* SPTMainTabBarController.m in Sources */,
 				1B327D331995B5E10089E5BA /* SPTAppDelegate.m in Sources */,
 				1B327D731995BE0A0089E5BA /* SPTProfileViewController.m in Sources */,
 				1B327D6E1995BDFF0089E5BA /* SPTMapViewController.m in Sources */,
 				1B0846DC1995FE270055CDCE /* SPTWorkoutCellTableViewCell.m in Sources */,
-				1B327D861995C0070089E5BA /* SPTCreateWorkoutTableViewController.m in Sources */,
 				1B327D2F1995B5E10089E5BA /* main.m in Sources */,
 				1B39051E1995F4860084CE57 /* SPTSignUpViewController.m in Sources */,
 				1B327D641995BDC10089E5BA /* SPTLoginViewController.m in Sources */,
