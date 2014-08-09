@@ -8,5 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-#define SPT_COLOR_KEY [UIColor colorWithRed:52/255 green:73/255 blue:94/255 alpha:1]
-#define SPT_COLOR_SECONDARY [UIColor colorWithRed:216/255 green:208/255 blue:94/255 alpha:1]
+#define SPT_COLOR_KEY [UIColor colorWithRed:52/255.f green:73/255.f blue:94/255.f alpha:1]
+#define SPT_COLOR_SECONDARY [UIColor colorWithRed:216/255.f green:208/255.f blue:94/255.f alpha:1]
