@@ -16,8 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *capacityLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *hostImage;
-@property (weak, nonatomic) IBOutlet UILabel *hostFirstNameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *hostLastNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *createdByLabel;
+
 @property (nonatomic) SPTWorkout *workout;
 @end
 
@@ -44,11 +44,14 @@
     NSString *max = [@(self.workout.capacity) stringValue];
     [self.capacityLabel setText:[NSString stringWithFormat:@"%@/%@", remaining, max]];
 
-    [self.hostFirstNameLabel setText:self.workout.createdByFirstName];
-    [self.hostLastNameLabel setText:self.workout.createdByLastName];
+    [self.createdByLabel setText:[NSString stringWithFormat:@"Created by %@ %@", self.workout.createdByFirstName, self.workout.createdByLastName]];
     [self.hostImage setImage:self.workout.createdByImage];
     [self.hostImage.layer setCornerRadius:self.hostImage.frame.size.height/2];
     [self.hostImage.layer setMasksToBounds:YES];
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MMM dd' at 'H:mm a"];
+    [self.dateTimeLabel setText:[dateFormatter stringFromDate:self.workout.workoutDate]];
 }
 
 +(SPTWorkoutDetailsViewController *)workoutViewControllerWithWorkout:(SPTWorkout *)workout
