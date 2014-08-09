@@ -37,6 +37,8 @@
     instance->_name = [parseObject objectForKey:@"name"];
     instance->_workoutDescription = [parseObject objectForKey:@"description"];
     instance->_capacity = [[parseObject objectForKey:@"capacity"] unsignedIntegerValue];
+    instance->_latitude = [[parseObject objectForKey:@"latidude"] doubleValue];
+    instance->_longitude = [[parseObject objectForKey:@"longitude"] doubleValue];
     instance->_backingParseObject = parseObject;
     instance->_createdByUser = [parseObject objectForKey:@"createdBy"];
 
@@ -55,6 +57,8 @@
     if (self.workoutDescription)
         [backingParseObject setObject:self.workoutDescription forKey:@"description"];
     [backingParseObject setObject:@(self.capacity) forKey:@"capacity"];
+    [backingParseObject setObject:@(self.latitude) forKey:@"latitude"];
+    [backingParseObject setObject:@(self.longitude) forKey:@"longitude"];
     if (![backingParseObject objectForKey:@"createdBy"]) {
         [backingParseObject setObject:[PFUser currentUser] forKey:@"createdBy"];
         [[backingParseObject relationForKey:@"joinedUsers"] addObject:[PFUser currentUser]];
