@@ -18,6 +18,7 @@
 		1B0846DC1995FE270055CDCE /* SPTWorkoutCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0846DA1995FE270055CDCE /* SPTWorkoutCellTableViewCell.m */; };
 		1B0846DD1995FE270055CDCE /* SPTWorkoutCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0846DB1995FE270055CDCE /* SPTWorkoutCellTableViewCell.xib */; };
 		1B0846E0199605740055CDCE /* SPTWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0846DF199605740055CDCE /* SPTWorkout.m */; };
+		1B0846E3199624FF0055CDCE /* SPTWorkoutAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0846E2199624FF0055CDCE /* SPTWorkoutAnnotation.m */; };
 		1B327D231995B5E10089E5BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D221995B5E10089E5BA /* Foundation.framework */; };
 		1B327D251995B5E10089E5BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D241995B5E10089E5BA /* CoreGraphics.framework */; };
 		1B327D271995B5E10089E5BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D261995B5E10089E5BA /* UIKit.framework */; };
@@ -81,6 +82,8 @@
 		1B0846DB1995FE270055CDCE /* SPTWorkoutCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTWorkoutCellTableViewCell.xib; sourceTree = "<group>"; };
 		1B0846DE199605740055CDCE /* SPTWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTWorkout.h; sourceTree = "<group>"; };
 		1B0846DF199605740055CDCE /* SPTWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTWorkout.m; sourceTree = "<group>"; };
+		1B0846E1199624FF0055CDCE /* SPTWorkoutAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTWorkoutAnnotation.h; sourceTree = "<group>"; };
+		1B0846E2199624FF0055CDCE /* SPTWorkoutAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTWorkoutAnnotation.m; sourceTree = "<group>"; };
 		1B327D1F1995B5E10089E5BA /* Spottr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spottr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B327D221995B5E10089E5BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B327D241995B5E10089E5BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -298,6 +301,8 @@
 			children = (
 				1B0846DE199605740055CDCE /* SPTWorkout.h */,
 				1B0846DF199605740055CDCE /* SPTWorkout.m */,
+				1B0846E1199624FF0055CDCE /* SPTWorkoutAnnotation.h */,
+				1B0846E2199624FF0055CDCE /* SPTWorkoutAnnotation.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -564,6 +569,7 @@
 				1B327D6E1995BDFF0089E5BA /* SPTMapViewController.m in Sources */,
 				1B0846DC1995FE270055CDCE /* SPTWorkoutCellTableViewCell.m in Sources */,
 				1B327D2F1995B5E10089E5BA /* main.m in Sources */,
+				1B0846E3199624FF0055CDCE /* SPTWorkoutAnnotation.m in Sources */,
 				1B39051E1995F4860084CE57 /* SPTSignUpViewController.m in Sources */,
 				1B327D641995BDC10089E5BA /* SPTLoginViewController.m in Sources */,
 				1B0846CB1995EDD20055CDCE /* SPTMacros.m in Sources */,

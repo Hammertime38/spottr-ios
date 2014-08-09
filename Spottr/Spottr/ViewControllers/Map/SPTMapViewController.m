@@ -11,8 +11,9 @@
 #import <Parse/Parse.h>
 #import "SPTCreateWorkoutTableViewController.h"
 #import "SPTWorkout.h"
+#import "SPTWorkoutAnnotation.h"
 
-@interface SPTMapViewController ()
+@interface SPTMapViewController () <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
@@ -23,8 +24,29 @@
 {
     [super viewDidLoad];
 
+    [self.mapView setDelegate:self];
+
+    [self loadNearbyWorkouts];
+
     UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewWorkoutTapped:)];
     [self.navigationItem setRightBarButtonItem:addBarButtonItem];
+}
+
+- (void)loadNearbyWorkouts
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Workout"];
+    __weak typeof(self) weakSelf = self;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSMutableArray *mutableAnnotations = [NSMutableArray array];
+            for (PFObject *object in objects) {
+                SPTWorkout *workout = [SPTWorkout workoutWithParseObject:object];
+                SPTWorkoutAnnotation *annotation = [SPTWorkoutAnnotation annotationWithWorkout:workout];
+                [mutableAnnotations addObject:annotation];
+            }
+            [weakSelf.mapView addAnnotations:mutableAnnotations];
+        });
+    }];
 }
 
 - (void)addNewWorkoutTapped:(id)sender
@@ -48,5 +70,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    static NSString * const kWorkoutAnnotationIdentifier = @"kWorkoutAnnotationIdentifier";
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"mapPin"];
+    if(annotationView){
+        [annotationView setAnnotation:annotation];
+    } else {
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:kWorkoutAnnotationIdentifier];
+    }
+    [annotationView setImage:[UIImage imageNamed:@"SPTMapAnnotationIcon"]];
+    return annotationView;
+}
+
 
 @end
