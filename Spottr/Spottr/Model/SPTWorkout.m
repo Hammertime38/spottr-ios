@@ -63,7 +63,7 @@
     }];
 }
 
-- (void)joinWithCompleteion:(SPTParseFetchBlock)completion
+- (void)joinWithCompletion:(SPTParseFetchBlock)completion
 {
     if (!self.objectId) {
         if (completion) completion([NSError new], nil);
