@@ -7,8 +7,12 @@
 //
 
 #import "SPTProfileViewController.h"
+#import <Parse/Parse.h>
 
 @interface SPTProfileViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *userImageIcon;
 
 @end
 
@@ -26,7 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.userImageIcon.layer setCornerRadius:self.userImageIcon.frame.size.height/2];
+    [self.userImageIcon.layer setMasksToBounds:YES];
+    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:nil action:nil]];
 }
 
 - (void)didReceiveMemoryWarning

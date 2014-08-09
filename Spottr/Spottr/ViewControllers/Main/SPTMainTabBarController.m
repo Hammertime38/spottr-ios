@@ -29,15 +29,16 @@ static UIView *annoyingBackgroundView_;
     SPTWorkoutListTableViewController *workoutListViewController = [SPTWorkoutListTableViewController new];
     UINavigationController *workoutListNavigationController = [[UINavigationController alloc] initWithRootViewController:workoutListViewController];
     SPTProfileViewController *profileViewController = [SPTProfileViewController new];
+    UINavigationController *profileNavigationController = [[UINavigationController alloc] initWithRootViewController:profileViewController];
 
     [mapNavigationController.navigationBar setTranslucent:YES];
     [workoutListNavigationController.navigationBar setTranslucent:YES];
 
     [mapNavigationController.tabBarItem setImage:[UIImage imageNamed:@"SPTMapTabIcon"]];
     [workoutListNavigationController.tabBarItem setImage:[UIImage imageNamed:@"SPTListTabIcon"]];
-    [profileViewController.tabBarItem setImage:[UIImage imageNamed:@"SPTProfileTabIcon"]];
+    [profileNavigationController.tabBarItem setImage:[UIImage imageNamed:@"SPTProfileTabIcon"]];
 
-    [self setViewControllers:@[mapNavigationController, workoutListNavigationController, profileViewController]];
+    [self setViewControllers:@[mapNavigationController, workoutListNavigationController, profileNavigationController]];
 
     annoyingBackgroundView_ = [[UIView alloc] initWithFrame:self.view.bounds];
     [annoyingBackgroundView_ setBackgroundColor:SPT_COLOR_KEY];
