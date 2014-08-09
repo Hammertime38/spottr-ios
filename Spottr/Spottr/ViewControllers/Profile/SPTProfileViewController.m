@@ -41,6 +41,8 @@
             });
         }
     }];
+    [self.firstNameLabel setText:[[PFUser currentUser] objectForKey:@"firstName"]];
+    [self.lastNameLabel setText:[[PFUser currentUser] objectForKey:@"lastName"]];
 }
 
 - (void)didReceiveMemoryWarning

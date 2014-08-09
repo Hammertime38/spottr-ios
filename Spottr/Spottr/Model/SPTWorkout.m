@@ -105,8 +105,8 @@
         if (![objects containsObject:[PFUser currentUser]]) {
             [[self.backingParseObject relationForKey:@"joinedParseUsers"] addObject:[PFUser currentUser]];
             [[self.backingParseObject relationForKey:@"joinedUsers"] addObject:[PFUser currentUser]];
-            NSNumber *numJoinedUsers = [self.backingParseObject objectForKey:@"numJoinedUsers"];
-            [self.backingParseObject setObject:@(numJoinedUsers.unsignedIntegerValue+1) forKey:@"numJoinedUsers"];
+            NSNumber *numJoinedUsers = [self.backingParseObject objectForKey:@"numUsersJoined"];
+            [self.backingParseObject setObject:@(numJoinedUsers.unsignedIntegerValue+1) forKey:@"numUsersJoined"];
             NSArray *workoutsJoined = [[PFUser currentUser] objectForKey:@"workoutsJoined"] ?: @[];
             workoutsJoined = [workoutsJoined arrayByAddingObject:self.backingParseObject.objectId];
             [[PFUser currentUser] setObject:workoutsJoined forKey:@"workoutsJoined"];
@@ -131,10 +131,10 @@
         return;
 
     [[self.backingParseObject relationForKey:@"joinedUsers"] removeObject:[PFUser currentUser]];
-    NSNumber *numJoinedUsers = [self.backingParseObject objectForKey:@"numJoinedUsers"];
+    NSNumber *numJoinedUsers = [self.backingParseObject objectForKey:@"numUsersJoined"];
     numJoinedUsers = @(numJoinedUsers.integerValue-1);
 
-    [self.backingParseObject setObject:numJoinedUsers forKey:@"numJoinedUsers"];
+    [self.backingParseObject setObject:numJoinedUsers forKey:@"numUsersJoined"];
 
     NSMutableArray *workoutsJoined = [[[PFUser currentUser] objectForKey:@"workoutsJoined"] mutableCopy];
     [workoutsJoined removeObject:self.backingParseObject.objectId];
