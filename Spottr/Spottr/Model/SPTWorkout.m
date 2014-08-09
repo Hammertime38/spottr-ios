@@ -56,7 +56,7 @@
 
 - (void)saveWithCompletion:(SPTParseFetchBlock)completion
 {
-    PFObject *backingParseObject = [self backingParseObject];
+    PFObject *backingParseObject = [self parseObject];
 
     if (self.workoutDate)
         [backingParseObject setObject:self.workoutDate forKey:@"workoutDate"];
@@ -69,8 +69,10 @@
     [backingParseObject setObject:@(self.longitude) forKey:@"longitude"];
     if (![backingParseObject objectForKey:@"createdBy"]) {
         [backingParseObject setObject:[PFUser currentUser] forKey:@"createdBy"];
-        [[backingParseObject relationForKey:@"joinedUsers"] addObject:[PFUser currentUser]];
-        [backingParseObject setObject:@1 forKey:@"numJoinedUsers"];
+        [[backingParseObject relationForKey:@"joinedUsers"] addObject:[PFUser currentUser] ];
+        [backingParseObject setObject:@1 forKey:@"numUsersJoined"];
+        [backingParseObject setObject:[[PFUser currentUser] objectForKey:@"firstName"] forKey:@"createdByFirstName"];
+        [backingParseObject setObject:[[PFUser currentUser] objectForKey:@"lastName"] forKey:@"createdByLastName"];
     }
     [backingParseObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{

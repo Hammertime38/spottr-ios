@@ -12,6 +12,8 @@
 #import "SPTLabelAndTextViewTableViewCell.h"
 #import "SPTDatePickerTableViewCell.h"
 #import <CoreLocation/CoreLocation.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "SPTWorkout.h"
 
 static NSString * const kTextFieldCell = @"kTextFieldCell";
 static NSString * const kLabelAndTextFieldCell = @"kLabelAndTextFieldCell";
@@ -45,7 +47,39 @@ static NSString * const kDatePickerCell = @"kDatePickerCell";
 
 - (void)spotTapped
 {
-    
+    [SVProgressHUD showWithStatus:@"Scheduling Workout..."];
+    [[CLGeocoder new] geocodeAddressString:self.addressTextField.text completionHandler:^(NSArray *placemarks, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (error) {
+                [SVProgressHUD showErrorWithStatus:@"Couldn't find address :("];
+                return;
+            }
+
+            CLPlacemark *placemark = [placemarks firstObject];
+            double latitude = placemark.location.coordinate.latitude;
+            double longitude = placemark.location.coordinate.longitude;
+
+            SPTWorkout *newWorkout = [SPTWorkout new];
+            [newWorkout setLatitude:latitude];
+            [newWorkout setLongitude:longitude];
+            [newWorkout setName:self.activityNameTextField.text];
+            [newWorkout setWorkoutDescription:self.activityDescriptionTextField.text];
+            [newWorkout setWorkoutDate:self.datePicker.date];
+            [newWorkout setCapacity:self.groupSizeTextField.text.integerValue];
+
+            [newWorkout saveWithCompletion:^(NSError *error, id result) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (!error) {
+                        [SVProgressHUD showSuccessWithStatus:@"Workout Scheduled"];
+                        [self dismissViewControllerAnimated:YES completion:nil];
+                    }
+                    else {
+                        [SVProgressHUD showErrorWithStatus:@"Failed to schedule workout"];
+                    }
+                });
+            }];
+        });
+    }];
 }
 
 #pragma mark - Table view data source
