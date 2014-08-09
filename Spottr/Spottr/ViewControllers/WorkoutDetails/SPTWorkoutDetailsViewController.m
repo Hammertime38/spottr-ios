@@ -61,6 +61,7 @@
     NSArray *workoutsJoinedObjectIds = [[PFUser currentUser] objectForKey:@"workoutsJoined"];
     if ([workoutsJoinedObjectIds containsObject:self.workout.parseObject.objectId]) {
         [self.youAreAttendingLabel setHidden:NO];
+        [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Leave Workout" style:UIBarButtonItemStylePlain target:self action:@selector(didTapLeaveButton)]];
     }
     else {
         [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Join" style:UIBarButtonItemStylePlain target:self action:@selector(didTapJoinButton)]];
@@ -80,6 +81,16 @@
     [self.workout joinWithCompletion:^(NSError *error, id result) {
         // screw error checking
         [SVProgressHUD showSuccessWithStatus:@"Joined"];
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+}
+
+- (void)didTapLeaveButton
+{
+    [SVProgressHUD showWithStatus:@"Loading"];
+    [self.workout leaveWithCompletion:^(NSError *error, id result) {
+        // again, screw error checking
+        [SVProgressHUD dismiss];
         [self.navigationController popViewControllerAnimated:YES];
     }];
 }

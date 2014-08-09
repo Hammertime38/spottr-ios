@@ -115,6 +115,40 @@
     }];
 }
 
+- (void)leaveWithCompletion:(SPTParseFetchBlock)completion
+{
+    if (!self.objectId) {
+        if (completion) completion([NSError new], nil);
+        return;
+    }
+
+    if (!self.backingParseObject.objectId)
+        return;
+
+    [[self.backingParseObject relationForKey:@"joinedUsers"] removeObject:[PFUser currentUser]];
+    NSNumber *numJoinedUsers = [self.backingParseObject objectForKey:@"numJoinedUsers"];
+    numJoinedUsers = @(numJoinedUsers.integerValue-1);
+
+    [self.backingParseObject setObject:numJoinedUsers forKey:@"numJoinedUsers"];
+
+    NSMutableArray *workoutsJoined = [[[PFUser currentUser] objectForKey:@"workoutsJoined"] mutableCopy];
+    [workoutsJoined removeObject:self.backingParseObject.objectId];
+    [[PFUser currentUser] setObject:workoutsJoined forKey:@"workoutsJoined"];
+
+    [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (numJoinedUsers.integerValue == 0) {
+            [self.backingParseObject deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (completion) completion(error, nil);
+            }];
+        }
+        else {
+            [self.backingParseObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (completion) completion(error, nil);
+            }];
+        }
+    }];
+}
+
 - (void)fetchCreatedByWithCompletion:(SPTParseFetchBlock)completion
 {
     if (!self.objectId) {

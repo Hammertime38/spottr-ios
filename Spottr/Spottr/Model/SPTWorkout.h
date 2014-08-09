@@ -20,6 +20,7 @@
 + (SPTWorkout *)workoutWithParseObject:(PFObject *)parseObject;
 - (void)saveWithCompletion:(SPTParseFetchBlock)completion;
 - (void)joinWithCompletion:(SPTParseFetchBlock)completion;
+- (void)leaveWithCompletion:(SPTParseFetchBlock)completion;
 
 @property (nonatomic, copy) NSDate *workoutDate;
 @property (nonatomic, copy) NSString *workoutDescription;
