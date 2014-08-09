@@ -44,6 +44,17 @@
 		1B327D8D1995C1190089E5BA /* SPTWorkoutDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B327D8B1995C1190089E5BA /* SPTWorkoutDetailsViewController.xib */; };
 		1B39051E1995F4860084CE57 /* SPTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B39051C1995F4860084CE57 /* SPTSignUpViewController.m */; };
 		1B39051F1995F4860084CE57 /* SPTSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B39051D1995F4860084CE57 /* SPTSignUpViewController.xib */; };
+		1B390523199685990084CE57 /* SPTCreateWorkoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B390521199685980084CE57 /* SPTCreateWorkoutTableViewController.m */; };
+		1B390524199685990084CE57 /* SPTCreateWorkoutTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B390522199685990084CE57 /* SPTCreateWorkoutTableViewController.xib */; };
+		1B39052D199686130084CE57 /* SPTTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B39052B199686130084CE57 /* SPTTextFieldTableViewCell.m */; };
+		1B39052E199686130084CE57 /* SPTTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B39052C199686130084CE57 /* SPTTextFieldTableViewCell.xib */; };
+		1B390532199686650084CE57 /* SPTLabelAndTextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B390530199686650084CE57 /* SPTLabelAndTextViewTableViewCell.m */; };
+		1B390533199686650084CE57 /* SPTLabelAndTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B390531199686650084CE57 /* SPTLabelAndTextViewTableViewCell.xib */; };
+		1B390537199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B390535199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.m */; };
+		1B390538199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B390536199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.xib */; };
+		1B39053C19968D6B0084CE57 /* SPTDatePickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B39053A19968D6B0084CE57 /* SPTDatePickerTableViewCell.m */; };
+		1B39053D19968D6B0084CE57 /* SPTDatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B39053B19968D6B0084CE57 /* SPTDatePickerTableViewCell.xib */; };
+		1B39053F199692270084CE57 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B39053E199692270084CE57 /* CoreLocation.framework */; };
 		2F227552199609D3004CFF9A /* SPTMapAnnotationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F227551199609D3004CFF9A /* SPTMapAnnotationIcon.png */; };
 		2F22755419960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755319960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png */; };
 		2F22755719960D5C004CFF9A /* SPTAddPhotoPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755519960D5C004CFF9A /* SPTAddPhotoPlaceholder.png */; };
@@ -121,6 +132,22 @@
 		1B39051B1995F4860084CE57 /* SPTSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSignUpViewController.h; sourceTree = "<group>"; };
 		1B39051C1995F4860084CE57 /* SPTSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTSignUpViewController.m; sourceTree = "<group>"; };
 		1B39051D1995F4860084CE57 /* SPTSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTSignUpViewController.xib; sourceTree = "<group>"; };
+		1B390520199685980084CE57 /* SPTCreateWorkoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTCreateWorkoutTableViewController.h; sourceTree = "<group>"; };
+		1B390521199685980084CE57 /* SPTCreateWorkoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTCreateWorkoutTableViewController.m; sourceTree = "<group>"; };
+		1B390522199685990084CE57 /* SPTCreateWorkoutTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTCreateWorkoutTableViewController.xib; sourceTree = "<group>"; };
+		1B39052A199686130084CE57 /* SPTTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		1B39052B199686130084CE57 /* SPTTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		1B39052C199686130084CE57 /* SPTTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTTextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		1B39052F199686650084CE57 /* SPTLabelAndTextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTLabelAndTextViewTableViewCell.h; sourceTree = "<group>"; };
+		1B390530199686650084CE57 /* SPTLabelAndTextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTLabelAndTextViewTableViewCell.m; sourceTree = "<group>"; };
+		1B390531199686650084CE57 /* SPTLabelAndTextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTLabelAndTextViewTableViewCell.xib; sourceTree = "<group>"; };
+		1B390534199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTLabelAndTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		1B390535199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTLabelAndTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		1B390536199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTLabelAndTextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		1B39053919968D6B0084CE57 /* SPTDatePickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTDatePickerTableViewCell.h; sourceTree = "<group>"; };
+		1B39053A19968D6B0084CE57 /* SPTDatePickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTDatePickerTableViewCell.m; sourceTree = "<group>"; };
+		1B39053B19968D6B0084CE57 /* SPTDatePickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTDatePickerTableViewCell.xib; sourceTree = "<group>"; };
+		1B39053E199692270084CE57 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		200BBF56EE304EF59AB61934 /* Pods-Spottr.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spottr.xcconfig"; path = "Pods/Pods-Spottr.xcconfig"; sourceTree = "<group>"; };
 		2F227551199609D3004CFF9A /* SPTMapAnnotationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTMapAnnotationIcon.png; sourceTree = "<group>"; };
 		2F22755319960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTMapAnnotationIcon@2x.png"; sourceTree = "<group>"; };
@@ -142,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B39053F199692270084CE57 /* CoreLocation.framework in Frameworks */,
 				1B0846BA1995E7FD0055CDCE /* MapKit.framework in Frameworks */,
 				1B327D251995B5E10089E5BA /* CoreGraphics.framework in Frameworks */,
 				1B327D271995B5E10089E5BA /* UIKit.framework in Frameworks */,
@@ -199,6 +227,18 @@
 				1B0846D91995FE270055CDCE /* SPTWorkoutCellTableViewCell.h */,
 				1B0846DA1995FE270055CDCE /* SPTWorkoutCellTableViewCell.m */,
 				1B0846DB1995FE270055CDCE /* SPTWorkoutCellTableViewCell.xib */,
+				1B39052A199686130084CE57 /* SPTTextFieldTableViewCell.h */,
+				1B39052B199686130084CE57 /* SPTTextFieldTableViewCell.m */,
+				1B39052C199686130084CE57 /* SPTTextFieldTableViewCell.xib */,
+				1B39052F199686650084CE57 /* SPTLabelAndTextViewTableViewCell.h */,
+				1B390530199686650084CE57 /* SPTLabelAndTextViewTableViewCell.m */,
+				1B390531199686650084CE57 /* SPTLabelAndTextViewTableViewCell.xib */,
+				1B390534199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.h */,
+				1B390535199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.m */,
+				1B390536199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.xib */,
+				1B39053919968D6B0084CE57 /* SPTDatePickerTableViewCell.h */,
+				1B39053A19968D6B0084CE57 /* SPTDatePickerTableViewCell.m */,
+				1B39053B19968D6B0084CE57 /* SPTDatePickerTableViewCell.xib */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -226,6 +266,7 @@
 		1B327D211995B5E10089E5BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B39053E199692270084CE57 /* CoreLocation.framework */,
 				1B0846B91995E7FD0055CDCE /* MapKit.framework */,
 				1B327D221995B5E10089E5BA /* Foundation.framework */,
 				1B327D241995B5E10089E5BA /* CoreGraphics.framework */,
@@ -407,6 +448,9 @@
 				2F227562199615E3004CFF9A /* SPTCreateWorkoutController.h */,
 				2F227563199615E3004CFF9A /* SPTCreateWorkoutController.m */,
 				2F227564199615E3004CFF9A /* SPTCreateWorkoutController.xib */,
+				1B390520199685980084CE57 /* SPTCreateWorkoutTableViewController.h */,
+				1B390521199685980084CE57 /* SPTCreateWorkoutTableViewController.m */,
+				1B390522199685990084CE57 /* SPTCreateWorkoutTableViewController.xib */,
 			);
 			path = CreateWorkout;
 			sourceTree = "<group>";
@@ -491,10 +535,14 @@
 			files = (
 				2F22755719960D5C004CFF9A /* SPTAddPhotoPlaceholder.png in Resources */,
 				1B327D651995BDC10089E5BA /* SPTLoginViewController.xib in Resources */,
+				1B390533199686650084CE57 /* SPTLabelAndTextViewTableViewCell.xib in Resources */,
+				1B39053D19968D6B0084CE57 /* SPTDatePickerTableViewCell.xib in Resources */,
 				2F227552199609D3004CFF9A /* SPTMapAnnotationIcon.png in Resources */,
+				1B390524199685990084CE57 /* SPTCreateWorkoutTableViewController.xib in Resources */,
 				1B327D741995BE0A0089E5BA /* SPTProfileViewController.xib in Resources */,
 				2F22756019961235004CFF9A /* SPTTitle@2x.png in Resources */,
 				2F22755E19961235004CFF9A /* SPTLogo@2x.png in Resources */,
+				1B39052E199686130084CE57 /* SPTTextFieldTableViewCell.xib in Resources */,
 				1B327D8D1995C1190089E5BA /* SPTWorkoutDetailsViewController.xib in Resources */,
 				2F22755D19961235004CFF9A /* SPTLogo.png in Resources */,
 				1B327D6F1995BDFF0089E5BA /* SPTMapViewController.xib in Resources */,
@@ -506,6 +554,7 @@
 				2F22755F19961235004CFF9A /* SPTTitle.png in Resources */,
 				1B0846C71995EB650055CDCE /* SPTProfileTabIcon.png in Resources */,
 				1B39051F1995F4860084CE57 /* SPTSignUpViewController.xib in Resources */,
+				1B390538199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.xib in Resources */,
 				1B0846C31995EB650055CDCE /* SPTListTabIcon.png in Resources */,
 				2F227566199615E3004CFF9A /* SPTCreateWorkoutController.xib in Resources */,
 				1B327D2D1995B5E10089E5BA /* InfoPlist.strings in Resources */,
@@ -570,10 +619,15 @@
 				1B327D7B1995BE980089E5BA /* SPTMainTabBarController.m in Sources */,
 				1B327D331995B5E10089E5BA /* SPTAppDelegate.m in Sources */,
 				1B327D731995BE0A0089E5BA /* SPTProfileViewController.m in Sources */,
+				1B390523199685990084CE57 /* SPTCreateWorkoutTableViewController.m in Sources */,
+				1B390537199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.m in Sources */,
 				1B327D6E1995BDFF0089E5BA /* SPTMapViewController.m in Sources */,
 				1B0846DC1995FE270055CDCE /* SPTWorkoutCellTableViewCell.m in Sources */,
 				1B327D2F1995B5E10089E5BA /* main.m in Sources */,
+				1B39052D199686130084CE57 /* SPTTextFieldTableViewCell.m in Sources */,
 				1B0846E3199624FF0055CDCE /* SPTWorkoutAnnotation.m in Sources */,
+				1B39053C19968D6B0084CE57 /* SPTDatePickerTableViewCell.m in Sources */,
+				1B390532199686650084CE57 /* SPTLabelAndTextViewTableViewCell.m in Sources */,
 				1B39051E1995F4860084CE57 /* SPTSignUpViewController.m in Sources */,
 				1B327D641995BDC10089E5BA /* SPTLoginViewController.m in Sources */,
 				1B0846CB1995EDD20055CDCE /* SPTMacros.m in Sources */,

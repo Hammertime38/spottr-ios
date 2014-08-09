@@ -9,7 +9,7 @@
 #import "SPTMapViewController.h"
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
-#import "SPTCreateWorkoutController.h"
+#import "SPTCreateWorkoutTableViewController.h"
 #import "SPTWorkout.h"
 #import "SPTWorkoutAnnotation.h"
 #import "SPTWorkoutDetailsViewController.h"
@@ -57,7 +57,7 @@
 
 - (void)addNewWorkoutTapped:(id)sender
 {
-    UIViewController *createWorkoutViewController = [SPTCreateWorkoutController new];
+    UIViewController *createWorkoutViewController = [SPTCreateWorkoutTableViewController new];
     UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil) style:UIBarButtonItemStylePlain target:self action:@selector(closePresentedViewController)];
     [createWorkoutViewController.navigationItem setLeftBarButtonItem:backBarButtonItem];
     // Embed in navigation controller for simple close behavior
