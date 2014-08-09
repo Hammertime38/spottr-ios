@@ -84,9 +84,11 @@
         [annotationView setAnnotation:annotation];
     } else {
         annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:kWorkoutAnnotationIdentifier];
+        UIButton *calloutAccessoryButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        [annotationView setRightCalloutAccessoryView:calloutAccessoryButton];
+        [annotationView setImage:[UIImage imageNamed:@"SPTMapAnnotationIcon"]];
+        [annotationView setCanShowCallout:YES];
     }
-    [annotationView setImage:[UIImage imageNamed:@"SPTMapAnnotationIcon"]];
-    [annotationView setCanShowCallout:YES];
     return annotationView;
 }
 
@@ -96,5 +98,6 @@
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
 }
+
 
 @end
