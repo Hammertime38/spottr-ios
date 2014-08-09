@@ -48,6 +48,10 @@
 		2F22755419960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755319960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png */; };
 		2F22755719960D5C004CFF9A /* SPTAddPhotoPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755519960D5C004CFF9A /* SPTAddPhotoPlaceholder.png */; };
 		2F22755819960D5C004CFF9A /* SPTAddPhotoPlaceholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755619960D5C004CFF9A /* SPTAddPhotoPlaceholder@2x.png */; };
+		2F22755D19961235004CFF9A /* SPTLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755919961235004CFF9A /* SPTLogo.png */; };
+		2F22755E19961235004CFF9A /* SPTLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755A19961235004CFF9A /* SPTLogo@2x.png */; };
+		2F22755F19961235004CFF9A /* SPTTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755B19961235004CFF9A /* SPTTitle.png */; };
+		2F22756019961235004CFF9A /* SPTTitle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755C19961235004CFF9A /* SPTTitle@2x.png */; };
 		C0B430FAE3B14898B4B189CB /* libPods-Spottr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F69D72784472414EA1FCFC33 /* libPods-Spottr.a */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +122,10 @@
 		2F22755319960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTMapAnnotationIcon@2x.png"; sourceTree = "<group>"; };
 		2F22755519960D5C004CFF9A /* SPTAddPhotoPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTAddPhotoPlaceholder.png; sourceTree = "<group>"; };
 		2F22755619960D5C004CFF9A /* SPTAddPhotoPlaceholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTAddPhotoPlaceholder@2x.png"; sourceTree = "<group>"; };
+		2F22755919961235004CFF9A /* SPTLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTLogo.png; sourceTree = "<group>"; };
+		2F22755A19961235004CFF9A /* SPTLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTLogo@2x.png"; sourceTree = "<group>"; };
+		2F22755B19961235004CFF9A /* SPTTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTTitle.png; sourceTree = "<group>"; };
+		2F22755C19961235004CFF9A /* SPTTitle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTTitle@2x.png"; sourceTree = "<group>"; };
 		F69D72784472414EA1FCFC33 /* libPods-Spottr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spottr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -158,6 +166,10 @@
 		1B0846BC1995EB650055CDCE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2F22755919961235004CFF9A /* SPTLogo.png */,
+				2F22755A19961235004CFF9A /* SPTLogo@2x.png */,
+				2F22755B19961235004CFF9A /* SPTTitle.png */,
+				2F22755C19961235004CFF9A /* SPTTitle@2x.png */,
 				2F22755519960D5C004CFF9A /* SPTAddPhotoPlaceholder.png */,
 				2F22755619960D5C004CFF9A /* SPTAddPhotoPlaceholder@2x.png */,
 				2F227551199609D3004CFF9A /* SPTMapAnnotationIcon.png */,
@@ -469,12 +481,16 @@
 				1B327D651995BDC10089E5BA /* SPTLoginViewController.xib in Resources */,
 				2F227552199609D3004CFF9A /* SPTMapAnnotationIcon.png in Resources */,
 				1B327D741995BE0A0089E5BA /* SPTProfileViewController.xib in Resources */,
+				2F22756019961235004CFF9A /* SPTTitle@2x.png in Resources */,
+				2F22755E19961235004CFF9A /* SPTLogo@2x.png in Resources */,
 				1B327D8D1995C1190089E5BA /* SPTWorkoutDetailsViewController.xib in Resources */,
+				2F22755D19961235004CFF9A /* SPTLogo.png in Resources */,
 				1B327D6F1995BDFF0089E5BA /* SPTMapViewController.xib in Resources */,
 				2F22755819960D5C004CFF9A /* SPTAddPhotoPlaceholder@2x.png in Resources */,
 				1B0846DD1995FE270055CDCE /* SPTWorkoutCellTableViewCell.xib in Resources */,
 				1B327D811995BED60089E5BA /* SPTWorkoutListTableViewController.xib in Resources */,
 				1B0846C51995EB650055CDCE /* SPTMapTabIcon.png in Resources */,
+				2F22755F19961235004CFF9A /* SPTTitle.png in Resources */,
 				1B0846C71995EB650055CDCE /* SPTProfileTabIcon.png in Resources */,
 				1B39051F1995F4860084CE57 /* SPTSignUpViewController.xib in Resources */,
 				1B0846C31995EB650055CDCE /* SPTListTabIcon.png in Resources */,
