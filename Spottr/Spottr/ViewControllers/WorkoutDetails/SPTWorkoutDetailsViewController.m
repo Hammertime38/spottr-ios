@@ -9,6 +9,7 @@
 #import "SPTWorkoutDetailsViewController.h"
 #import "SPTWorkout.h"
 #import <Parse/Parse.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface SPTWorkoutDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *activityNameLabel;
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *capacityLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *hostImage;
 @property (weak, nonatomic) IBOutlet UILabel *createdByLabel;
+@property (weak, nonatomic) IBOutlet UILabel *youAreAttendingLabel;
 
 @property (nonatomic) SPTWorkout *workout;
 @end
@@ -36,7 +38,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Join" style:UIBarButtonItemStylePlain target:self action:@selector(didTapJoinButton)]];
     [self.activityNameLabel setText:self.workout.name];
     [self.descriptionTextLabel setText:self.workout.workoutDescription];
     
@@ -56,6 +57,14 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MMM dd' at 'H:mm a"];
     [self.dateTimeLabel setText:[dateFormatter stringFromDate:self.workout.workoutDate]];
+
+    NSArray *workoutsJoinedObjectIds = [[PFUser currentUser] objectForKey:@"workoutsJoined"];
+    if ([workoutsJoinedObjectIds containsObject:self.workout.parseObject.objectId]) {
+        [self.youAreAttendingLabel setHidden:NO];
+    }
+    else {
+        [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Join" style:UIBarButtonItemStylePlain target:self action:@selector(didTapJoinButton)]];
+    }
 }
 
 +(SPTWorkoutDetailsViewController *)workoutViewControllerWithWorkout:(SPTWorkout *)workout
@@ -67,8 +76,10 @@
 
 - (void)didTapJoinButton
 {
+    [SVProgressHUD showWithStatus:@"Loading"];
     [self.workout joinWithCompletion:^(NSError *error, id result) {
         // screw error checking
+        [SVProgressHUD showSuccessWithStatus:@"Joined"];
         [self.navigationController popViewControllerAnimated:YES];
     }];
 }
