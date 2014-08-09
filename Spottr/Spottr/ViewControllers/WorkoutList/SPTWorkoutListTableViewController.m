@@ -22,7 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationItem setTitle:@"Upcoming Workouts"];
+    [self.navigationItem setTitle:@"Upcoming Spots"];
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SPTWorkoutCellTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"workoutCell"];
     UIRefreshControl *refreshControl = [UIRefreshControl new];
