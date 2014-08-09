@@ -13,6 +13,8 @@
 @interface SPTLoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *spottrLogoImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *dotImageView;
+@property (weak, nonatomic) IBOutlet UIButton *loginWithFacebookButton;
+@property (weak, nonatomic) IBOutlet UIButton *beLameAndDontUseFacebookButton;
 
 @end
 
@@ -31,6 +33,8 @@
 {
     [super viewDidLoad];
     [self.view setBackgroundColor:SPT_COLOR_KEY];
+    [self.loginWithFacebookButton setAlpha:0];
+    [self.beLameAndDontUseFacebookButton setAlpha:0];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -42,7 +46,13 @@
             [self.dotImageView setFrame:CGRectMake(self.dotImageView.frame.origin.x, 20, self.dotImageView.frame.size.width, self.dotImageView.frame.size.height)];
             [self.spottrLogoImageView setFrame:CGRectMake(self.spottrLogoImageView.frame.origin.x, self.dotImageView.frame.size.height + self.dotImageView.frame.origin.y + 20, self.spottrLogoImageView.frame.size.width, self.spottrLogoImageView.frame.size.height)];
         } completion:^(BOOL finished) {
-            <#code#>
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.loginWithFacebookButton setAlpha:1];
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:0.5 delay:0.5 options:0 animations:^{
+                    [self.beLameAndDontUseFacebookButton setAlpha:1];
+                } completion:nil];
+            }];
         }];
         NSLog(@"derp");
     });
@@ -78,18 +88,19 @@
 }
 
 - (IBAction)signUpWithEmailTapped:(id)sender {
-    PFUser *newUser = [PFUser user];
+//    PFUser *newUser = [PFUser user];
 
-    [newUser setUsername:@"Doc"];
-    [newUser setPassword:@"test1234"];
-    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"Sign up successful!");
-        }
-        else {
-            NSLog(@":(");
-        }
-    }];
+//    [newUser setUsername:@"Doc"];
+//    [newUser setPassword:@"test1234"];
+//    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"Sign up successful!");
+//        }
+//        else {
+//            NSLog(@":(");
+//        }
+//    }];
+    NSLog(@"Not yet implemented");
 }
 
 

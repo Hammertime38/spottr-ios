@@ -19,6 +19,7 @@
 
 @implementation SPTMainTabBarController
 
+static UIView *annoyingBackgroundView_;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,6 +38,10 @@
     [profileViewController.tabBarItem setImage:[UIImage imageNamed:@"SPTProfileTabIcon"]];
 
     [self setViewControllers:@[mapNavigationController, workoutListNavigationController, profileViewController]];
+
+    annoyingBackgroundView_ = [[UIView alloc] initWithFrame:self.view.bounds];
+    [annoyingBackgroundView_ setBackgroundColor:SPT_COLOR_KEY];
+    [self.view addSubview:annoyingBackgroundView_];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -48,7 +53,12 @@
 - (void)checkLogin
 {
     if (![PFUser currentUser]) {
-        [self presentViewController:[SPTLoginViewController new] animated:NO completion:nil];
+        [self presentViewController:[SPTLoginViewController new] animated:NO completion:^{
+            [annoyingBackgroundView_ removeFromSuperview];
+        }];
+    }
+    else {
+        [annoyingBackgroundView_ removeFromSuperview];
     }
 }
 

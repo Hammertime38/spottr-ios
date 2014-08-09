@@ -7,7 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SPTLoginViewController">
             <connections>
+                <outlet property="beLameAndDontUseFacebookButton" destination="ipd-by-zC6" id="QNl-Nm-NB2"/>
                 <outlet property="dotImageView" destination="pY2-5b-cRq" id="xcE-7z-9xD"/>
+                <outlet property="loginWithFacebookButton" destination="oEr-nW-RUk" id="rdD-YJ-OuQ"/>
                 <outlet property="spottrLogoImageView" destination="SHB-az-S0o" id="mBG-3L-k3T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,11 +27,34 @@
                     <rect key="frame" x="77" y="76" width="167" height="167"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEr-nW-RUk">
+                    <rect key="frame" x="31" y="355" width="258" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="SPTFacebookButton.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="faebookLoginButtonTapped:" destination="-1" eventType="touchUpInside" id="uP4-tx-6Zp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipd-by-zC6">
+                    <rect key="frame" x="66" y="452" width="189" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="Continue without Facebook">
+                        <color key="titleColor" red="0.84705882352941175" green="0.81568627450980391" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="signUpWithEmailTapped:" destination="-1" eventType="touchUpInside" id="XJp-9C-Dnv"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
         </view>
     </objects>
     <resources>
+        <image name="SPTFacebookButton.png" width="300" height="65"/>
         <image name="SPTLogo.png" width="250" height="250"/>
         <image name="SPTTitle.png" width="640" height="201"/>
     </resources>
