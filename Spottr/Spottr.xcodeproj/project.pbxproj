@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0846BA1995E7FD0055CDCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0846B91995E7FD0055CDCE /* MapKit.framework */; };
 		1B327D231995B5E10089E5BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D221995B5E10089E5BA /* Foundation.framework */; };
 		1B327D251995B5E10089E5BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D241995B5E10089E5BA /* CoreGraphics.framework */; };
 		1B327D271995B5E10089E5BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D261995B5E10089E5BA /* UIKit.framework */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B0846B91995E7FD0055CDCE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1B327D1F1995B5E10089E5BA /* Spottr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spottr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B327D221995B5E10089E5BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B327D241995B5E10089E5BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0846BA1995E7FD0055CDCE /* MapKit.framework in Frameworks */,
 				1B327D251995B5E10089E5BA /* CoreGraphics.framework in Frameworks */,
 				1B327D271995B5E10089E5BA /* UIKit.framework in Frameworks */,
 				1B327D231995B5E10089E5BA /* Foundation.framework in Frameworks */,
@@ -134,6 +137,7 @@
 		1B327D211995B5E10089E5BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B0846B91995E7FD0055CDCE /* MapKit.framework */,
 				1B327D221995B5E10089E5BA /* Foundation.framework */,
 				1B327D241995B5E10089E5BA /* CoreGraphics.framework */,
 				1B327D261995B5E10089E5BA /* UIKit.framework */,
