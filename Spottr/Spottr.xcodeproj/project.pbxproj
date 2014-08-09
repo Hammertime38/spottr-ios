@@ -15,8 +15,8 @@
 		1B0846C71995EB650055CDCE /* SPTProfileTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0846C11995EB650055CDCE /* SPTProfileTabIcon.png */; };
 		1B0846C81995EB650055CDCE /* SPTProfileTabIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0846C21995EB650055CDCE /* SPTProfileTabIcon@2x.png */; };
 		1B0846CB1995EDD20055CDCE /* SPTMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0846CA1995EDD20055CDCE /* SPTMacros.m */; };
-		1B0846D01995F30F0055CDCE /* SPTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0846CE1995F30F0055CDCE /* SPTSignUpViewController.m */; };
-		1B0846D11995F30F0055CDCE /* SPTSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0846CF1995F30F0055CDCE /* SPTSignUpViewController.xib */; };
+		1B0846D61995F4120055CDCE /* SPTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0846D41995F4120055CDCE /* SPTSignUpViewController.m */; };
+		1B0846D71995F4120055CDCE /* SPTSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0846D51995F4120055CDCE /* SPTSignUpViewController.xib */; };
 		1B327D231995B5E10089E5BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D221995B5E10089E5BA /* Foundation.framework */; };
 		1B327D251995B5E10089E5BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D241995B5E10089E5BA /* CoreGraphics.framework */; };
 		1B327D271995B5E10089E5BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D261995B5E10089E5BA /* UIKit.framework */; };
@@ -65,9 +65,9 @@
 		1B0846C21995EB650055CDCE /* SPTProfileTabIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTProfileTabIcon@2x.png"; sourceTree = "<group>"; };
 		1B0846C91995EDD20055CDCE /* SPTMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTMacros.h; sourceTree = "<group>"; };
 		1B0846CA1995EDD20055CDCE /* SPTMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTMacros.m; sourceTree = "<group>"; };
-		1B0846CD1995F30F0055CDCE /* SPTSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSignUpViewController.h; sourceTree = "<group>"; };
-		1B0846CE1995F30F0055CDCE /* SPTSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTSignUpViewController.m; sourceTree = "<group>"; };
-		1B0846CF1995F30F0055CDCE /* SPTSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTSignUpViewController.xib; sourceTree = "<group>"; };
+		1B0846D31995F4120055CDCE /* SPTSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSignUpViewController.h; sourceTree = "<group>"; };
+		1B0846D41995F4120055CDCE /* SPTSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTSignUpViewController.m; sourceTree = "<group>"; };
+		1B0846D51995F4120055CDCE /* SPTSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTSignUpViewController.xib; sourceTree = "<group>"; };
 		1B327D1F1995B5E10089E5BA /* Spottr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spottr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B327D221995B5E10089E5BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B327D241995B5E10089E5BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,12 +155,12 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		1B0846CC1995F2F90055CDCE /* SignUp */ = {
+		1B0846D21995F4070055CDCE /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				1B0846CD1995F30F0055CDCE /* SPTSignUpViewController.h */,
-				1B0846CE1995F30F0055CDCE /* SPTSignUpViewController.m */,
-				1B0846CF1995F30F0055CDCE /* SPTSignUpViewController.xib */,
+				1B0846D31995F4120055CDCE /* SPTSignUpViewController.h */,
+				1B0846D41995F4120055CDCE /* SPTSignUpViewController.m */,
+				1B0846D51995F4120055CDCE /* SPTSignUpViewController.xib */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 		1B327D5B1995BD770089E5BA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1B0846CC1995F2F90055CDCE /* SignUp */,
+				1B0846D21995F4070055CDCE /* SignUp */,
 				1B327D881995C0DD0089E5BA /* WorkoutDetails */,
 				1B327D821995BFF00089E5BA /* CreateWorkout */,
 				1B327D7C1995BEB90089E5BA /* WorkoutList */,
@@ -444,7 +444,7 @@
 				1B327D811995BED60089E5BA /* SPTWorkoutListTableViewController.xib in Resources */,
 				1B0846C51995EB650055CDCE /* SPTMapTabIcon.png in Resources */,
 				1B0846C71995EB650055CDCE /* SPTProfileTabIcon.png in Resources */,
-				1B0846D11995F30F0055CDCE /* SPTSignUpViewController.xib in Resources */,
+				1B0846D71995F4120055CDCE /* SPTSignUpViewController.xib in Resources */,
 				1B0846C31995EB650055CDCE /* SPTListTabIcon.png in Resources */,
 				1B327D2D1995B5E10089E5BA /* InfoPlist.strings in Resources */,
 				1B327D351995B5E10089E5BA /* Images.xcassets in Resources */,
@@ -509,7 +509,7 @@
 				1B327D6E1995BDFF0089E5BA /* SPTMapViewController.m in Sources */,
 				1B327D861995C0070089E5BA /* SPTCreateWorkoutTableViewController.m in Sources */,
 				1B327D2F1995B5E10089E5BA /* main.m in Sources */,
-				1B0846D01995F30F0055CDCE /* SPTSignUpViewController.m in Sources */,
+				1B0846D61995F4120055CDCE /* SPTSignUpViewController.m in Sources */,
 				1B327D641995BDC10089E5BA /* SPTLoginViewController.m in Sources */,
 				1B0846CB1995EDD20055CDCE /* SPTMacros.m in Sources */,
 				1B327D8C1995C1190089E5BA /* SPTWorkoutDetailsViewController.m in Sources */,
