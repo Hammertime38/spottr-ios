@@ -7,6 +7,7 @@
 //
 
 #import "SPTWorkoutCellTableViewCell.h"
+#import "SPTWorkout.h"
 
 @interface SPTWorkoutCellTableViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *activityImageView;
@@ -21,6 +22,12 @@
 - (void)awakeFromNib {
     [self.activityImageView.layer setCornerRadius:self.activityImageView.frame.size.height/2];
     [self.activityImageView.layer setMasksToBounds:YES];
+}
+
+- (void)configureWithWorkout:(SPTWorkout *)workout
+{
+    [self.activityNameLabel setText:workout.name];
+    [self.activityDescriptionLabel setText:workout.workoutDescription];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

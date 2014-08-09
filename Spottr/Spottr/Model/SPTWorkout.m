@@ -35,6 +35,7 @@
     instance->_objectId = parseObject.objectId;
     instance->_workoutDate = [parseObject objectForKey:@"workoutDate"];
     instance->_name = [parseObject objectForKey:@"name"];
+    instance->_workoutDescription = [parseObject objectForKey:@"description"];
     instance->_capacity = [[parseObject objectForKey:@"capacity"] unsignedIntegerValue];
     instance->_backingParseObject = parseObject;
     instance->_createdByUser = [parseObject objectForKey:@"createdBy"];
@@ -51,6 +52,8 @@
         [backingParseObject setObject:self.workoutDate forKey:@"workoutDate"];
     if (self.name)
         [backingParseObject setObject:self.name forKey:@"name"];
+    if (self.workoutDescription)
+        [backingParseObject setObject:self.workoutDescription forKey:@"description"];
     [backingParseObject setObject:@(self.capacity) forKey:@"capacity"];
     if (![backingParseObject objectForKey:@"createdBy"]) {
         [backingParseObject setObject:[PFUser currentUser] forKey:@"createdBy"];

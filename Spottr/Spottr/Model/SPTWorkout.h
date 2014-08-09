@@ -21,6 +21,7 @@
 - (void)joinWithCompletion:(SPTParseFetchBlock)completion;
 
 @property (nonatomic, copy) NSDate *workoutDate;
+@property (nonatomic, copy) NSString *workoutDescription;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) NSUInteger capacity;
 @property (nonatomic, assign) NSUInteger numUsersJoined;
