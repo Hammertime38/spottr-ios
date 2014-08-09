@@ -9,6 +9,8 @@
 # Xcode
 #
 build/
+Build/
+Spottr/Build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
