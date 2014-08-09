@@ -42,8 +42,9 @@
         [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             if (weakSelf.workout != weakWorkout)
                 return;
-            
-            [weakSelf.activityImageView setImage:[UIImage imageWithData:data]];
+            UIImage *image = [UIImage imageWithData:data];
+            [weakSelf.activityImageView setImage:image];
+            [weakWorkout setCreatedByImage:image];
         }];
     }];
 }

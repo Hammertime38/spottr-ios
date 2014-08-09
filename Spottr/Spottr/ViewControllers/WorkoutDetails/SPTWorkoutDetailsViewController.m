@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *capacityLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *hostImage;
 @property (weak, nonatomic) IBOutlet UILabel *hostFirstNameLabel;
-@property (strong, nonatomic) IBOutlet UIView *hostLastNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *hostLastNameLabel;
 @property (nonatomic) SPTWorkout *workout;
 @end
 
@@ -38,11 +38,17 @@
     [super viewDidLoad];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Join" style:UIBarButtonItemStylePlain target:self action:@selector(didTapJoinButton)]];
     [self.activityNameLabel setText:self.workout.name];
-    [self.descriptionTextLabel setText:self.workout.description];
+    [self.descriptionTextLabel setText:self.workout.workoutDescription];
     
     NSString *remaining = [@(self.workout.capacity - self.workout.numUsersJoined) stringValue];
     NSString *max = [@(self.workout.capacity) stringValue];
     [self.capacityLabel setText:[NSString stringWithFormat:@"%@/%@", remaining, max]];
+
+    [self.hostFirstNameLabel setText:self.workout.createdByFirstName];
+    [self.hostLastNameLabel setText:self.workout.createdByLastName];
+    [self.hostImage setImage:self.workout.createdByImage];
+    [self.hostImage.layer setCornerRadius:self.hostImage.frame.size.height/2];
+    [self.hostImage.layer setMasksToBounds:YES];
 }
 
 +(SPTWorkoutDetailsViewController *)workoutViewControllerWithWorkout:(SPTWorkout *)workout

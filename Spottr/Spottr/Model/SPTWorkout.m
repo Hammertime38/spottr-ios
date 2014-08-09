@@ -101,6 +101,8 @@
     }
     else {
         [[self.backingParseObject objectForKey:@"createdBy"] fetchInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            [self setCreatedByFirstName:[object objectForKey:@"firstName"]];
+            [self setCreatedByLastName:[object objectForKey:@"lastName"]];
             if (completion) completion(nil, object);
         }];
     }

@@ -27,6 +27,9 @@
 @property (nonatomic, assign, readonly) NSUInteger numUsersJoined;
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, assign) double longitude;
+@property (nonatomic, copy) NSString *createdByFirstName;
+@property (nonatomic, copy) NSString *createdByLastName;
+@property (nonatomic) UIImage *createdByImage;
 
 - (void)fetchCreatedByWithCompletion:(SPTParseFetchBlock)completion;
 - (void)fetchJoinedUsersWithCompletion:(SPTParseFetchBlock)completion;
