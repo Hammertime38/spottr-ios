@@ -44,6 +44,13 @@
     instance->_createdByUser = [parseObject objectForKey:@"createdBy"];
     instance->_numUsersJoined = [[parseObject objectForKey:@"numUsersJoined"] unsignedIntegerValue];
 
+    // What I'm about to do...is...just...yeah.
+    PFFile *file = [parseObject objectForKey:@"createdByImage"];
+    instance->_createdByImage = file;
+
+    instance->_createdByFirstName = [parseObject objectForKey:@"createdByFirstName"];
+    instance->_createdByLastName = [parseObject objectForKey:@"createdByLastName"];
+
     return instance;
 }
 

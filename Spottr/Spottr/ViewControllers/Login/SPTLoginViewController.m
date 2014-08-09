@@ -11,6 +11,8 @@
 
 
 @interface SPTLoginViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *spottrLogoImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *dotImageView;
 
 @end
 
@@ -28,6 +30,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setBackgroundColor:SPT_COLOR_KEY];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:1.25 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [self.dotImageView setFrame:CGRectMake(self.dotImageView.frame.origin.x, 20, self.dotImageView.frame.size.width, self.dotImageView.frame.size.height)];
+            [self.spottrLogoImageView setFrame:CGRectMake(self.spottrLogoImageView.frame.origin.x, self.dotImageView.frame.size.height + self.dotImageView.frame.origin.y + 20, self.spottrLogoImageView.frame.size.width, self.spottrLogoImageView.frame.size.height)];
+        } completion:^(BOOL finished) {
+            <#code#>
+        }];
+        NSLog(@"derp");
+    });
 }
 
 - (void)didReceiveMemoryWarning

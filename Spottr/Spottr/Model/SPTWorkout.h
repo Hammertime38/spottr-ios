@@ -13,6 +13,7 @@
  */
 
 @class PFObject;
+@class PFFile;
 @interface SPTWorkout : NSObject
 
 - (PFObject *)parseObject;
@@ -29,7 +30,7 @@
 @property (nonatomic, assign) double longitude;
 @property (nonatomic, copy) NSString *createdByFirstName;
 @property (nonatomic, copy) NSString *createdByLastName;
-@property (nonatomic) UIImage *createdByImage;
+@property (nonatomic) PFFile *createdByImage;
 
 - (void)fetchCreatedByWithCompletion:(SPTParseFetchBlock)completion;
 - (void)fetchJoinedUsersWithCompletion:(SPTParseFetchBlock)completion;

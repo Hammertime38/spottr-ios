@@ -45,7 +45,11 @@
     [self.capacityLabel setText:[NSString stringWithFormat:@"%@/%@", remaining, max]];
 
     [self.createdByLabel setText:[NSString stringWithFormat:@"Created by %@ %@", self.workout.createdByFirstName, self.workout.createdByLastName]];
-    [self.hostImage setImage:self.workout.createdByImage];
+
+    [self.workout.createdByImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        [self.hostImage setImage:[UIImage imageWithData:data]];
+    }];
+
     [self.hostImage.layer setCornerRadius:self.hostImage.frame.size.height/2];
     [self.hostImage.layer setMasksToBounds:YES];
 
