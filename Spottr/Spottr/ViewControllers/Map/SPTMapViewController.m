@@ -25,6 +25,7 @@
     [super viewDidLoad];
 
     [self.mapView setDelegate:self];
+    [self.mapView setUserTrackingMode:MKUserTrackingModeFollow];
 
     [self loadNearbyWorkouts];
 
@@ -43,8 +44,9 @@
                 SPTWorkout *workout = [SPTWorkout workoutWithParseObject:object];
                 SPTWorkoutAnnotation *annotation = [SPTWorkoutAnnotation annotationWithWorkout:workout];
                 [mutableAnnotations addObject:annotation];
+                [weakSelf.mapView addAnnotation:annotation];
             }
-            [weakSelf.mapView addAnnotations:mutableAnnotations];
+//            [weakSelf.mapView addAnnotations:mutableAnnotations];
         });
     }];
 }
@@ -73,16 +75,26 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
+    if (![annotation isKindOfClass:[SPTWorkoutAnnotation class]])
+        return nil;
+
     static NSString * const kWorkoutAnnotationIdentifier = @"kWorkoutAnnotationIdentifier";
-    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"mapPin"];
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:kWorkoutAnnotationIdentifier];
     if(annotationView){
         [annotationView setAnnotation:annotation];
     } else {
         annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:kWorkoutAnnotationIdentifier];
     }
     [annotationView setImage:[UIImage imageNamed:@"SPTMapAnnotationIcon"]];
+    [annotationView setCanShowCallout:YES];
     return annotationView;
 }
 
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+}
 
 @end
