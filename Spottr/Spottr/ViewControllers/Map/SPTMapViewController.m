@@ -26,6 +26,8 @@
 {
     [super viewDidLoad];
 
+    [self.navigationItem setTitle:@"Upcoming Workouts"];
+
     [self.mapView setDelegate:self];
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollow];
 

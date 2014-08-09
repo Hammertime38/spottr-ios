@@ -5,6 +5,7 @@ target "Spottr" do
 
 pod 'Parse-iOS-SDK', '~> 1.2.19'
 
+pod 'SVProgressHUD', '~> 1.0'
 end
 
 target "SpottrTests" do

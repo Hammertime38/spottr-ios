@@ -34,19 +34,16 @@
 
     __weak typeof(self) weakSelf = self;
     __weak typeof(workout) weakWorkout = workout;
-    [workout fetchCreatedByWithCompletion:^(NSError *error, id result) {
+    [workout.createdByImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (weakSelf.workout != weakWorkout)
             return;
-
-        PFFile *file = [result objectForKey:@"userPhoto"];
-        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-            if (weakSelf.workout != weakWorkout)
-                return;
-            UIImage *image = [UIImage imageWithData:data];
-            [weakSelf.activityImageView setImage:image];
-            [weakWorkout setCreatedByImage:image];
-        }];
+        UIImage *image = [UIImage imageWithData:data];
+        [weakSelf.activityImageView setImage:image];
     }];
+
+    NSDateFormatter *horriblyInitializedDateFormatter = [[NSDateFormatter alloc] init];
+    [horriblyInitializedDateFormatter setDateFormat:@"M/dd/yyyy' at 'H:mm a"];
+    [self.activityDateLabel setText:[horriblyInitializedDateFormatter stringFromDate:workout.workoutDate]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

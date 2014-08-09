@@ -22,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationItem setTitle:@"Upcoming Workouts"];
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SPTWorkoutCellTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"workoutCell"];
     UIRefreshControl *refreshControl = [UIRefreshControl new];
@@ -43,7 +44,11 @@
         for (PFObject *object in objects) {
             [workouts addObject:[SPTWorkout workoutWithParseObject:object]];
         }
-        [weakSelf setWorkouts:[workouts copy]];
+        NSArray *orderedWorkouts = [workouts sortedArrayUsingComparator:^NSComparisonResult(SPTWorkout *obj1, SPTWorkout *obj2) {
+            return [obj1.workoutDate compare:obj2.workoutDate];
+        }];
+
+        [weakSelf setWorkouts:orderedWorkouts];
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.refreshControl endRefreshing];
             [weakSelf.tableView reloadData];
@@ -100,6 +105,12 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Magic :)
+    return 102;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // So much magic :)
     return 102;
 }
 
