@@ -41,9 +41,9 @@
     [self.activityNameLabel setText:self.workout.name];
     [self.descriptionTextLabel setText:self.workout.workoutDescription];
     
-    NSString *remaining = [@(self.workout.capacity - self.workout.numUsersJoined) stringValue];
+    NSString *taken = [@(self.workout.numUsersJoined) stringValue];
     NSString *max = [@(self.workout.capacity) stringValue];
-    [self.capacityLabel setText:[NSString stringWithFormat:@"%@/%@", remaining, max]];
+    [self.capacityLabel setText:[NSString stringWithFormat:@"%@/%@", taken, max]];
 
     [self.createdByLabel setText:[NSString stringWithFormat:@"Created by %@ %@", self.workout.createdByFirstName, self.workout.createdByLastName]];
 
