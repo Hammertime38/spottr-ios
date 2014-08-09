@@ -10,6 +10,7 @@
 #import "SPTCreateWorkoutController.h"
 #import "SPTWorkoutCellTableViewCell.h"
 #import "SPTWorkout.h"
+#import "SPTWorkoutDetailsViewController.h"
 #import <Parse/Parse.h>
 
 @interface SPTWorkoutListTableViewController ()
@@ -100,6 +101,13 @@
 {
     // Magic :)
     return 102;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SPTWorkout *workout = self.workouts[indexPath.row];
+
+    [self.navigationController pushViewController:[SPTWorkoutDetailsViewController workoutViewControllerWithWorkout:workout] animated:YES];
 }
 
 /*

@@ -12,6 +12,7 @@
 #import "SPTCreateWorkoutController.h"
 #import "SPTWorkout.h"
 #import "SPTWorkoutAnnotation.h"
+#import "SPTWorkoutDetailsViewController.h"
 #import <objc/runtime.h>
 
 @interface SPTMapViewController () <MKMapViewDelegate>
@@ -100,6 +101,8 @@ static const char kHackyButtonAnnotationKey;
 - (void)didTapCalloutAccessory:(UIButton *)sender
 {
     SPTWorkoutAnnotation *annotation = objc_getAssociatedObject(sender, &kHackyButtonAnnotationKey);
+
+    [self.navigationController pushViewController:[SPTWorkoutDetailsViewController workoutViewControllerWithWorkout:annotation.workout] animated:YES];
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
