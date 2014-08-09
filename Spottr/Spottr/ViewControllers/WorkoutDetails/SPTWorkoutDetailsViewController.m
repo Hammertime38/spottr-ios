@@ -7,9 +7,18 @@
 //
 
 #import "SPTWorkoutDetailsViewController.h"
+#import "SPTWorkout.h"
+#import <Parse/Parse.h>
 
 @interface SPTWorkoutDetailsViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *activityNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *capacityLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *hostImage;
+@property (weak, nonatomic) IBOutlet UILabel *hostFirstNameLabel;
+@property (strong, nonatomic) IBOutlet UIView *hostLastNameLabel;
+@property (nonatomic) SPTWorkout *workout;
 @end
 
 @implementation SPTWorkoutDetailsViewController
@@ -26,7 +35,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Join" style:UIBarButtonItemStylePlain target:self action:@selector(didTapJoinButton)]];
+}
+
++(SPTWorkoutDetailsViewController *)workoutViewControllerWithWorkout:(SPTWorkout *)workout
+{
+    SPTWorkoutDetailsViewController *instance = [self new];
+    instance->_workout = workout;
+    return instance;
+}
+
+- (void)didTapJoinButton
+{
+    [self.workout joinWithCompletion:^(NSError *error, id result) {
+        // screw error checking
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
