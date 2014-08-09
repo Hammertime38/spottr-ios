@@ -3,6 +3,8 @@
 
 target "Spottr" do
 
+pod 'Parse-iOS-SDK', '~> 1.2.19'
+
 end
 
 target "SpottrTests" do
