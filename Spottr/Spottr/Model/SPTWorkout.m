@@ -92,7 +92,7 @@
             [[self.backingParseObject relationForKey:@"joinedUsers"] addObject:[PFUser currentUser]];
             NSNumber *numJoinedUsers = [self.backingParseObject objectForKey:@"numJoinedUsers"];
             [self.backingParseObject setObject:@(numJoinedUsers.unsignedIntegerValue+1) forKey:@"numJoinedUsers"];
-            NSArray *workoutsJoined = [[PFUser currentUser] objectForKey:@"workoutsJoined"];
+            NSArray *workoutsJoined = [[PFUser currentUser] objectForKey:@"workoutsJoined"] ?: @[];
             workoutsJoined = [workoutsJoined arrayByAddingObject:self.backingParseObject.objectId];
             [[PFUser currentUser] setObject:workoutsJoined forKey:@"workoutsJoined"];
             [[PFUser currentUser] save];

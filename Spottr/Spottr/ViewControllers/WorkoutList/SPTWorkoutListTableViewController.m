@@ -36,6 +36,12 @@
     [self reloadWorkouts];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)reloadWorkouts
 {
     __weak typeof(self) weakSelf = self;
