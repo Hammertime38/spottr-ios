@@ -7,9 +7,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SPTCreateWorkoutController">
             <connections>
                 <outlet property="activityTextField" destination="Dbm-NB-dML" id="rmb-rG-2ba"/>
+                <outlet property="addressTextField" destination="mW8-KJ-PDe" id="U4l-u5-6YC"/>
                 <outlet property="dateTimePicker" destination="4AK-qU-itV" id="0Bj-50-iAu"/>
                 <outlet property="descriptionTextArea" destination="QdV-ur-HjX" id="7Mh-8N-6fu"/>
                 <outlet property="groupSizeTextField" destination="Tl9-Ka-5S8" id="a4g-cQ-2Rg"/>
+                <outlet property="scrollView" destination="JNg-Wb-ctR" id="q9c-op-BhH"/>
+                <outlet property="spotButton" destination="TNQ-RJ-zxG" id="xeB-DX-Uix"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
