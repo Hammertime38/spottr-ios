@@ -33,6 +33,14 @@
     [self.userImageIcon.layer setCornerRadius:self.userImageIcon.frame.size.height/2];
     [self.userImageIcon.layer setMasksToBounds:YES];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:nil action:nil]];
+
+    [[[PFUser currentUser] objectForKey:@"userPhoto"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (data) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.userImageIcon setImage:[UIImage imageWithData:data]];
+            });
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
