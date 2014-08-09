@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="287" height="101"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MQr-kc-fe4">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SPTMapAnnotationIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="MQr-kc-fe4">
                         <rect key="frame" x="15" y="15" width="71" height="71"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="71" id="JgA-HS-7d4"/>
@@ -75,4 +75,7 @@
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="SPTMapAnnotationIcon.png" width="32" height="32"/>
+    </resources>
 </document>

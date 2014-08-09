@@ -48,6 +48,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+
     [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, self.spotButton.frame.origin.y + self.spotButton.frame.size.height + 10)];
     // magic numbers woo
 }
