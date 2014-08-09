@@ -7,7 +7,3 @@
 //
 
 #import "SPTMacros.h"
-
-@implementation SPTMacros
-
-@end

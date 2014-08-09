@@ -17,6 +17,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setTintColor:SPT_COLOR_KEY];
 
     [Parse setApplicationId:@"sS9RKloTta3zQ7T6Bl5Xj5h3YwUl2qslGukeSaKo" clientKey:@"0CGqtFdKI1cNq9BUCfejz7nnKVeJVbAxUvk9HbdF"];
     [PFFacebookUtils initializeFacebook];
