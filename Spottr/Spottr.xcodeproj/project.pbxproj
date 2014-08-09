@@ -44,6 +44,8 @@
 		1B327D8D1995C1190089E5BA /* SPTWorkoutDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B327D8B1995C1190089E5BA /* SPTWorkoutDetailsViewController.xib */; };
 		1B39051E1995F4860084CE57 /* SPTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B39051C1995F4860084CE57 /* SPTSignUpViewController.m */; };
 		1B39051F1995F4860084CE57 /* SPTSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B39051D1995F4860084CE57 /* SPTSignUpViewController.xib */; };
+		2F227552199609D3004CFF9A /* SPTMapAnnotationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F227551199609D3004CFF9A /* SPTMapAnnotationIcon.png */; };
+		2F22755419960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755319960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png */; };
 		C0B430FAE3B14898B4B189CB /* libPods-Spottr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F69D72784472414EA1FCFC33 /* libPods-Spottr.a */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +112,8 @@
 		1B39051C1995F4860084CE57 /* SPTSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTSignUpViewController.m; sourceTree = "<group>"; };
 		1B39051D1995F4860084CE57 /* SPTSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTSignUpViewController.xib; sourceTree = "<group>"; };
 		200BBF56EE304EF59AB61934 /* Pods-Spottr.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spottr.xcconfig"; path = "Pods/Pods-Spottr.xcconfig"; sourceTree = "<group>"; };
+		2F227551199609D3004CFF9A /* SPTMapAnnotationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTMapAnnotationIcon.png; sourceTree = "<group>"; };
+		2F22755319960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTMapAnnotationIcon@2x.png"; sourceTree = "<group>"; };
 		F69D72784472414EA1FCFC33 /* libPods-Spottr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spottr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +154,8 @@
 		1B0846BC1995EB650055CDCE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2F227551199609D3004CFF9A /* SPTMapAnnotationIcon.png */,
+				2F22755319960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png */,
 				1B0846BD1995EB650055CDCE /* SPTListTabIcon.png */,
 				1B0846BE1995EB650055CDCE /* SPTListTabIcon@2x.png */,
 				1B0846BF1995EB650055CDCE /* SPTMapTabIcon.png */,
@@ -454,6 +460,7 @@
 			files = (
 				1B327D871995C0070089E5BA /* SPTCreateWorkoutTableViewController.xib in Resources */,
 				1B327D651995BDC10089E5BA /* SPTLoginViewController.xib in Resources */,
+				2F227552199609D3004CFF9A /* SPTMapAnnotationIcon.png in Resources */,
 				1B327D741995BE0A0089E5BA /* SPTProfileViewController.xib in Resources */,
 				1B327D8D1995C1190089E5BA /* SPTWorkoutDetailsViewController.xib in Resources */,
 				1B327D6F1995BDFF0089E5BA /* SPTMapViewController.xib in Resources */,
@@ -464,6 +471,7 @@
 				1B39051F1995F4860084CE57 /* SPTSignUpViewController.xib in Resources */,
 				1B0846C31995EB650055CDCE /* SPTListTabIcon.png in Resources */,
 				1B327D2D1995B5E10089E5BA /* InfoPlist.strings in Resources */,
+				2F22755419960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png in Resources */,
 				1B327D351995B5E10089E5BA /* Images.xcassets in Resources */,
 				1B0846C61995EB650055CDCE /* SPTMapTabIcon@2x.png in Resources */,
 				1B0846C41995EB650055CDCE /* SPTListTabIcon@2x.png in Resources */,
