@@ -8,12 +8,14 @@
 
 #import "SPTWorkoutCellTableViewCell.h"
 #import "SPTWorkout.h"
+#import <Parse/Parse.h>
 
 @interface SPTWorkoutCellTableViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *activityImageView;
 @property (weak, nonatomic) IBOutlet UILabel *activityNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *activityDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *activityDateLabel;
+@property (nonatomic, weak) SPTWorkout *workout;
 
 @end
 
@@ -26,8 +28,24 @@
 
 - (void)configureWithWorkout:(SPTWorkout *)workout
 {
+    [self setWorkout:workout];
     [self.activityNameLabel setText:workout.name];
     [self.activityDescriptionLabel setText:workout.workoutDescription];
+
+    __weak typeof(self) weakSelf = self;
+    __weak typeof(workout) weakWorkout = workout;
+    [workout fetchCreatedByWithCompletion:^(NSError *error, id result) {
+        if (weakSelf.workout != weakWorkout)
+            return;
+
+        PFFile *file = [result objectForKey:@"userPhoto"];
+        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (weakSelf.workout != weakWorkout)
+                return;
+            
+            [weakSelf.activityImageView setImage:[UIImage imageWithData:data]];
+        }];
+    }];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

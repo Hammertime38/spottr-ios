@@ -100,7 +100,9 @@
         if (completion) completion(nil, [PFUser currentUser]);
     }
     else {
-        if (completion) completion(nil, self.createdByUser);
+        [[self.backingParseObject objectForKey:@"createdBy"] fetchInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if (completion) completion(nil, object);
+        }];
     }
 }
 
