@@ -54,6 +54,7 @@
 		2F22756019961235004CFF9A /* SPTTitle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755C19961235004CFF9A /* SPTTitle@2x.png */; };
 		2F227565199615E3004CFF9A /* SPTCreateWorkoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F227563199615E3004CFF9A /* SPTCreateWorkoutController.m */; };
 		2F227566199615E3004CFF9A /* SPTCreateWorkoutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F227564199615E3004CFF9A /* SPTCreateWorkoutController.xib */; };
+		2F6B89781996730F00824552 /* SPTFacebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6B89771996730F00824552 /* SPTFacebookButton.png */; };
 		C0B430FAE3B14898B4B189CB /* libPods-Spottr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F69D72784472414EA1FCFC33 /* libPods-Spottr.a */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		2F227562199615E3004CFF9A /* SPTCreateWorkoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTCreateWorkoutController.h; sourceTree = "<group>"; };
 		2F227563199615E3004CFF9A /* SPTCreateWorkoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTCreateWorkoutController.m; sourceTree = "<group>"; };
 		2F227564199615E3004CFF9A /* SPTCreateWorkoutController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTCreateWorkoutController.xib; sourceTree = "<group>"; };
+		2F6B89771996730F00824552 /* SPTFacebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTFacebookButton.png; sourceTree = "<group>"; };
 		F69D72784472414EA1FCFC33 /* libPods-Spottr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spottr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -172,6 +174,7 @@
 		1B0846BC1995EB650055CDCE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2F6B89771996730F00824552 /* SPTFacebookButton.png */,
 				2F22755919961235004CFF9A /* SPTLogo.png */,
 				2F22755A19961235004CFF9A /* SPTLogo@2x.png */,
 				2F22755B19961235004CFF9A /* SPTTitle.png */,
@@ -498,6 +501,7 @@
 				2F22755819960D5C004CFF9A /* SPTAddPhotoPlaceholder@2x.png in Resources */,
 				1B0846DD1995FE270055CDCE /* SPTWorkoutCellTableViewCell.xib in Resources */,
 				1B327D811995BED60089E5BA /* SPTWorkoutListTableViewController.xib in Resources */,
+				2F6B89781996730F00824552 /* SPTFacebookButton.png in Resources */,
 				1B0846C51995EB650055CDCE /* SPTMapTabIcon.png in Resources */,
 				2F22755F19961235004CFF9A /* SPTTitle.png in Resources */,
 				1B0846C71995EB650055CDCE /* SPTProfileTabIcon.png in Resources */,

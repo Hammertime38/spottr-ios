@@ -78,20 +78,18 @@
 }
 
 - (IBAction)signUpWithEmailTapped:(id)sender {
-//    PFUser *newUser = [PFUser user];
+    PFUser *newUser = [PFUser user];
 
-//
-//    [newUser setUsername:@"Derpy"];
-//    [newUser setPassword:@"test1234"];
-//    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//        if (succeeded) {
-//            NSLog(@"Sign up successful!");
-//        }
-//        else {
-//            NSLog(@":(");
-//        }
-//    }];
-    NSLog(@"Not yet implemented");
+    [newUser setUsername:@"Doc"];
+    [newUser setPassword:@"test1234"];
+    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Sign up successful!");
+        }
+        else {
+            NSLog(@":(");
+        }
+    }];
 }
 
 
