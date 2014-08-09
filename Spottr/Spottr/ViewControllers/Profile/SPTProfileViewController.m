@@ -30,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationItem setTitle:@"Profile"];
+
     [self.userImageIcon.layer setCornerRadius:self.userImageIcon.frame.size.height/2];
     [self.userImageIcon.layer setMasksToBounds:YES];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:nil action:nil]];

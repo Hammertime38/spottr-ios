@@ -63,8 +63,6 @@
 		2F22755E19961235004CFF9A /* SPTLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755A19961235004CFF9A /* SPTLogo@2x.png */; };
 		2F22755F19961235004CFF9A /* SPTTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755B19961235004CFF9A /* SPTTitle.png */; };
 		2F22756019961235004CFF9A /* SPTTitle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F22755C19961235004CFF9A /* SPTTitle@2x.png */; };
-		2F227565199615E3004CFF9A /* SPTCreateWorkoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F227563199615E3004CFF9A /* SPTCreateWorkoutController.m */; };
-		2F227566199615E3004CFF9A /* SPTCreateWorkoutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F227564199615E3004CFF9A /* SPTCreateWorkoutController.xib */; };
 		2F6B89781996730F00824552 /* SPTFacebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6B89771996730F00824552 /* SPTFacebookButton.png */; };
 		2F6B897A19969AE800824552 /* SPTHardcodedImageLol.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6B897919969AE800824552 /* SPTHardcodedImageLol.png */; };
 		C0B430FAE3B14898B4B189CB /* libPods-Spottr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F69D72784472414EA1FCFC33 /* libPods-Spottr.a */; };
@@ -158,9 +156,6 @@
 		2F22755A19961235004CFF9A /* SPTLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTLogo@2x.png"; sourceTree = "<group>"; };
 		2F22755B19961235004CFF9A /* SPTTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTTitle.png; sourceTree = "<group>"; };
 		2F22755C19961235004CFF9A /* SPTTitle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTTitle@2x.png"; sourceTree = "<group>"; };
-		2F227562199615E3004CFF9A /* SPTCreateWorkoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTCreateWorkoutController.h; sourceTree = "<group>"; };
-		2F227563199615E3004CFF9A /* SPTCreateWorkoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTCreateWorkoutController.m; sourceTree = "<group>"; };
-		2F227564199615E3004CFF9A /* SPTCreateWorkoutController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTCreateWorkoutController.xib; sourceTree = "<group>"; };
 		2F6B89771996730F00824552 /* SPTFacebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTFacebookButton.png; sourceTree = "<group>"; };
 		2F6B897919969AE800824552 /* SPTHardcodedImageLol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTHardcodedImageLol.png; sourceTree = "<group>"; };
 		F69D72784472414EA1FCFC33 /* libPods-Spottr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spottr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -448,9 +443,6 @@
 		2F227561199615C6004CFF9A /* CreateWorkout */ = {
 			isa = PBXGroup;
 			children = (
-				2F227562199615E3004CFF9A /* SPTCreateWorkoutController.h */,
-				2F227563199615E3004CFF9A /* SPTCreateWorkoutController.m */,
-				2F227564199615E3004CFF9A /* SPTCreateWorkoutController.xib */,
 				1B390520199685980084CE57 /* SPTCreateWorkoutTableViewController.h */,
 				1B390521199685980084CE57 /* SPTCreateWorkoutTableViewController.m */,
 				1B390522199685990084CE57 /* SPTCreateWorkoutTableViewController.xib */,
@@ -560,7 +552,6 @@
 				1B39051F1995F4860084CE57 /* SPTSignUpViewController.xib in Resources */,
 				1B390538199687240084CE57 /* SPTLabelAndTextFieldTableViewCell.xib in Resources */,
 				1B0846C31995EB650055CDCE /* SPTListTabIcon.png in Resources */,
-				2F227566199615E3004CFF9A /* SPTCreateWorkoutController.xib in Resources */,
 				1B327D2D1995B5E10089E5BA /* InfoPlist.strings in Resources */,
 				2F22755419960A5D004CFF9A /* SPTMapAnnotationIcon@2x.png in Resources */,
 				1B327D351995B5E10089E5BA /* Images.xcassets in Resources */,
@@ -618,7 +609,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F227565199615E3004CFF9A /* SPTCreateWorkoutController.m in Sources */,
 				1B327D801995BED60089E5BA /* SPTWorkoutListTableViewController.m in Sources */,
 				1B327D7B1995BE980089E5BA /* SPTMainTabBarController.m in Sources */,
 				1B327D331995B5E10089E5BA /* SPTAppDelegate.m in Sources */,

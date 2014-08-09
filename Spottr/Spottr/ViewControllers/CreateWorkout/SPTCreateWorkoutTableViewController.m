@@ -35,6 +35,7 @@ static NSString * const kDatePickerCell = @"kDatePickerCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationItem setTitle:@"Schedule Workout"];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SPTTextFieldTableViewCell class]) bundle:nil] forCellReuseIdentifier:kTextFieldCell];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SPTLabelAndTextFieldTableViewCell class]) bundle:nil] forCellReuseIdentifier:kLabelAndTextFieldCell];
