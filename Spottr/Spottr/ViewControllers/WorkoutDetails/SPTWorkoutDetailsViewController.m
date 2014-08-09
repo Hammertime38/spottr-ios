@@ -29,6 +29,7 @@
     if (self) {
         // Custom initialization
     }
+
     return self;
 }
 
@@ -36,6 +37,12 @@
 {
     [super viewDidLoad];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Join" style:UIBarButtonItemStylePlain target:self action:@selector(didTapJoinButton)]];
+    [self.activityNameLabel setText:self.workout.name];
+    [self.descriptionTextLabel setText:self.workout.description];
+    
+    NSString *remaining = [@(self.workout.capacity - self.workout.numUsersJoined) stringValue];
+    NSString *max = [@(self.workout.capacity) stringValue];
+    [self.capacityLabel setText:[NSString stringWithFormat:@"%@/%@", remaining, max]];
 }
 
 +(SPTWorkoutDetailsViewController *)workoutViewControllerWithWorkout:(SPTWorkout *)workout
