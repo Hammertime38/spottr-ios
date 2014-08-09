@@ -7,6 +7,7 @@
 //
 
 #import "SPTWorkoutListTableViewController.h"
+#import "SPTCreateWorkoutTableViewController.h"
 
 @interface SPTWorkoutListTableViewController ()
 
@@ -17,14 +18,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    //Literally copy and pasted the following 20 lines of code <3
+    UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewWorkoutTapped:)];
+    [self.navigationItem setRightBarButtonItem:addBarButtonItem];
 }
 
+- (void)addNewWorkoutTapped:(id)sender
+{
+    UIViewController *createWorkoutViewController = [SPTCreateWorkoutTableViewController new];
+    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil) style:UIBarButtonItemStylePlain target:self action:@selector(closePresentedViewController)];
+    [createWorkoutViewController.navigationItem setLeftBarButtonItem:backBarButtonItem];
+    // Embed in navigation controller for simple close behavior
+    UINavigationController *destinationViewController = [[UINavigationController alloc] initWithRootViewController:createWorkoutViewController];
+    [self presentViewController:destinationViewController animated:YES completion:nil];
+}
+
+- (void)closePresentedViewController
+{
+    // Hacky McHackenstein
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
