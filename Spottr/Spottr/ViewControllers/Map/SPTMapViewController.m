@@ -8,6 +8,7 @@
 
 #import "SPTMapViewController.h"
 #import <MapKit/MapKit.h>
+#import "SPTCreateWorkoutTableViewController.h"
 
 @interface SPTMapViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -16,19 +17,28 @@
 
 @implementation SPTMapViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewWorkoutTapped:)];
+    [self.navigationItem setRightBarButtonItem:addBarButtonItem];
+}
+
+- (void)addNewWorkoutTapped:(id)sender
+{
+    UIViewController *createWorkoutViewController = [SPTCreateWorkoutTableViewController new];
+    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil) style:UIBarButtonItemStylePlain target:self action:@selector(closePresentedViewController)];
+    [createWorkoutViewController.navigationItem setLeftBarButtonItem:backBarButtonItem];
+    // Embed in navigation controller for simple close behavior
+    UINavigationController *destinationViewController = [[UINavigationController alloc] initWithRootViewController:createWorkoutViewController];
+    [self presentViewController:destinationViewController animated:YES completion:nil];
+}
+
+- (void)closePresentedViewController
+{
+    // Hacky McHackenstein
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
