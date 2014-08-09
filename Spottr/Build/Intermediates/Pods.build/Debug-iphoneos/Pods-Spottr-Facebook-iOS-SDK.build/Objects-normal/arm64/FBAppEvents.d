@@ -1,0 +1,28 @@
+dependencies: \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Insights/FBAppEvents.m \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBAppEvents.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBSDKMacros.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBSession.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Insights/FBAppEvents+Internal.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBError.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Core/FBLogger.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Network/FBRequest+Internal.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBRequest.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBGraphObject.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBOpenGraphAction.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBOpenGraphObject.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBRequestConnection.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Login/FBSession+Internal.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Login/FBSessionAppEventsState.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Login/FBSystemAccountStoreAdapter.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBTask.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBTaskCompletionSource.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Legacy/FBSessionManualTokenCachingStrategy.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBSessionTokenCachingStrategy.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBAccessTokenData.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Core/FBSettings+Internal.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Core/FBInternalSettings.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBSettings.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Insights/FBTimeSpentData.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Core/FBUtility.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Core/FBFetchedAppSettings.h

@@ -1,0 +1,35 @@
+dependencies: \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/UI/FBFriendPickerViewController.m \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBFriendPickerViewController.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBCacheDescriptor.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBSession.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBSDKMacros.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBGraphUser.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBGraphObject.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBGraphPlace.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBGraphLocation.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBViewController.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/UI/FBFriendPickerViewController+Internal.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Network/FBGraphObjectTableDataSource.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBRequest.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBOpenGraphAction.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBOpenGraphObject.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBRequestConnection.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Insights/FBAppEvents+Internal.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBAppEvents.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBError.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/UI/FBFriendPickerCacheDescriptor.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBFriendPickerViewDefaultPNG.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Network/FBGraphObjectPagingLoader.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Network/FBGraphObjectTableCell.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Network/FBGraphObjectTableSelection.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Core/FBInternalSettings.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBSettings.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Core/FBLogger.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Login/FBSession+Internal.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Login/FBSessionAppEventsState.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Login/FBSystemAccountStoreAdapter.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBTask.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBTaskCompletionSource.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Core/FBUtility.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Core/FBFetchedAppSettings.h

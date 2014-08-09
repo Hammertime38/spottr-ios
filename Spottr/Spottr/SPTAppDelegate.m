@@ -9,14 +9,21 @@
 #import "SPTAppDelegate.h"
 #import <FacebookSDK/FBAppCall.h>
 #import <Parse/Parse.h>
+#import "SPTLoginViewController.h"
+#import "SPTMainTabBarController.h"
 
 @implementation SPTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+
+    [Parse setApplicationId:@"sS9RKloTta3zQ7T6Bl5Xj5h3YwUl2qslGukeSaKo" clientKey:@"0CGqtFdKI1cNq9BUCfejz7nnKVeJVbAxUvk9HbdF"];
+    [PFFacebookUtils initializeFacebook];
+
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window setRootViewController:[SPTMainTabBarController new]];
+
     [self.window makeKeyAndVisible];
     return YES;
 }

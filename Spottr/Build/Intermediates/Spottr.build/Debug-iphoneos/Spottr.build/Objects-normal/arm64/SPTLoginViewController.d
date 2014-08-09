@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Spottr/ViewControllers/Login/SPTLoginViewController.m \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Spottr/ViewControllers/Login/SPTLoginViewController.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/Parse.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFACL.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFAnalytics.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFAnonymousUtils.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFUser.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFConstants.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFObject.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFSubclassing.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFCloud.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFFile.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFGeoPoint.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFQuery.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFRelation.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFRole.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFImageView.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFInstallation.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFLogInViewController.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFLogInView.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFSignUpViewController.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFSignUpView.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFProduct.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFProductTableViewController.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFQueryTableViewController.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFTableViewCell.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PF_EGORefreshTableHeaderView.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFPurchase.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFPush.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFTwitterUtils.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PF_Twitter.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Parse-iOS-SDK/Parse.framework/Headers/PFFacebookUtils.h

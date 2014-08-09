@@ -7,6 +7,11 @@
 //
 
 #import "SPTMainTabBarController.h"
+#import "SPTMapViewController.h"
+#import "SPTWorkoutListTableViewController.h"
+#import "SPTProfileViewController.h"
+#import "SPTLoginViewController.h"
+#import <Parse/Parse.h>
 
 @interface SPTMainTabBarController ()
 
@@ -14,19 +19,28 @@
 
 @implementation SPTMainTabBarController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    SPTMapViewController *mapViewController = [SPTMapViewController new];
+    SPTWorkoutListTableViewController *workoutListViewController = [SPTWorkoutListTableViewController new];
+    SPTProfileViewController *profileViewController = [SPTProfileViewController new];
+
+    [self setViewControllers:@[mapViewController, workoutListViewController, profileViewController]];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self checkLogin];
+}
+
+- (void)checkLogin
+{
+    if (![PFUser currentUser]) {
+        [self presentViewController:[SPTLoginViewController new] animated:NO completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning

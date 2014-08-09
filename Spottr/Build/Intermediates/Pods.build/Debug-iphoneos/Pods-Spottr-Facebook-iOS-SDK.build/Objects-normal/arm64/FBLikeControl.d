@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/UI/FBLikeControl.m \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBLikeControl.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBSDKMacros.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/Insights/FBAppEvents+Internal.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBAppEvents.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBSession.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/DeviceAPI/FBDialogs+Internal.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBDialogs.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBAppCall.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBAccessTokenData.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBAppLinkData.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBDialogsData.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBLinkShareParams.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBDialogsParams.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBOpenGraphActionParams.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBOpenGraphAction.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBGraphObject.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/FBPhotoParams.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/DeviceAPI/FBLikeDialogParams.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/UI/FBLikeActionController.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/UI/FBLikeBoxView.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/UI/FBLikeButton.h \
+  /Users/john.hammerlund/Library/GitHub/spottr-ios/Spottr/Pods/Facebook-iOS-SDK/src/UI/FBViewImpressionTracker.h
