@@ -27,6 +27,10 @@
     SPTWorkoutListTableViewController *workoutListViewController = [SPTWorkoutListTableViewController new];
     SPTProfileViewController *profileViewController = [SPTProfileViewController new];
 
+    [mapViewController.tabBarItem setImage:[UIImage imageNamed:@"SPTMapTabIcon"]];
+    [workoutListViewController.tabBarItem setImage:[UIImage imageNamed:@"SPTListTabIcon"]];
+    [profileViewController.tabBarItem setImage:[UIImage imageNamed:@"SPTProfileTabIcon"]];
+
     [self setViewControllers:@[mapViewController, workoutListViewController, profileViewController]];
 }
 

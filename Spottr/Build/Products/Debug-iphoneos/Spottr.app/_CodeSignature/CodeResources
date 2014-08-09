@@ -72,13 +72,37 @@
 		<data>
 		qHUKKsI3AEa9nOZyufCgC3oLwnY=
 		</data>
+		<key>SPTListTabIcon.png</key>
+		<data>
+		2PqKRLGyRgSl/Dc2ihHJ40Xspgc=
+		</data>
+		<key>SPTListTabIcon@2x.png</key>
+		<data>
+		fII96CpsgQesT/s+Gl3PCLBnfSc=
+		</data>
 		<key>SPTLoginViewController.nib</key>
 		<data>
 		61ny0BOkatZ0HSgyWXqq1Lyy8vs=
 		</data>
+		<key>SPTMapTabIcon.png</key>
+		<data>
+		O5Ll6zoVwK3BKkw4W0CLia42GAQ=
+		</data>
+		<key>SPTMapTabIcon@2x.png</key>
+		<data>
+		g87AcoU/lagmv7KnB3++tMMu1Zg=
+		</data>
 		<key>SPTMapViewController.nib</key>
 		<data>
-		UZHYmdtndr22WBkhCCuOluEIygk=
+		QVWnvrpEWLeGtQEJXLcYXL5FaxY=
+		</data>
+		<key>SPTProfileTabIcon.png</key>
+		<data>
+		Fw5eE3w+mq97gCmc+vpE5LSxJ2g=
+		</data>
+		<key>SPTProfileTabIcon@2x.png</key>
+		<data>
+		RYrowxz1TJB0vq/LnH85A1C+InU=
 		</data>
 		<key>SPTProfileViewController.nib</key>
 		<data>
@@ -171,13 +195,37 @@
 		<data>
 		qHUKKsI3AEa9nOZyufCgC3oLwnY=
 		</data>
+		<key>SPTListTabIcon.png</key>
+		<data>
+		2PqKRLGyRgSl/Dc2ihHJ40Xspgc=
+		</data>
+		<key>SPTListTabIcon@2x.png</key>
+		<data>
+		fII96CpsgQesT/s+Gl3PCLBnfSc=
+		</data>
 		<key>SPTLoginViewController.nib</key>
 		<data>
 		61ny0BOkatZ0HSgyWXqq1Lyy8vs=
 		</data>
+		<key>SPTMapTabIcon.png</key>
+		<data>
+		O5Ll6zoVwK3BKkw4W0CLia42GAQ=
+		</data>
+		<key>SPTMapTabIcon@2x.png</key>
+		<data>
+		g87AcoU/lagmv7KnB3++tMMu1Zg=
+		</data>
 		<key>SPTMapViewController.nib</key>
 		<data>
-		UZHYmdtndr22WBkhCCuOluEIygk=
+		QVWnvrpEWLeGtQEJXLcYXL5FaxY=
+		</data>
+		<key>SPTProfileTabIcon.png</key>
+		<data>
+		Fw5eE3w+mq97gCmc+vpE5LSxJ2g=
+		</data>
+		<key>SPTProfileTabIcon@2x.png</key>
+		<data>
+		RYrowxz1TJB0vq/LnH85A1C+InU=
 		</data>
 		<key>SPTProfileViewController.nib</key>
 		<data>

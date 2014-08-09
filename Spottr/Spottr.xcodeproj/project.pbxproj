@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1B0846BA1995E7FD0055CDCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0846B91995E7FD0055CDCE /* MapKit.framework */; };
+		1B0846C31995EB650055CDCE /* SPTListTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0846BD1995EB650055CDCE /* SPTListTabIcon.png */; };
+		1B0846C41995EB650055CDCE /* SPTListTabIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0846BE1995EB650055CDCE /* SPTListTabIcon@2x.png */; };
+		1B0846C51995EB650055CDCE /* SPTMapTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0846BF1995EB650055CDCE /* SPTMapTabIcon.png */; };
+		1B0846C61995EB650055CDCE /* SPTMapTabIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0846C01995EB650055CDCE /* SPTMapTabIcon@2x.png */; };
+		1B0846C71995EB650055CDCE /* SPTProfileTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0846C11995EB650055CDCE /* SPTProfileTabIcon.png */; };
+		1B0846C81995EB650055CDCE /* SPTProfileTabIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0846C21995EB650055CDCE /* SPTProfileTabIcon@2x.png */; };
 		1B327D231995B5E10089E5BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D221995B5E10089E5BA /* Foundation.framework */; };
 		1B327D251995B5E10089E5BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D241995B5E10089E5BA /* CoreGraphics.framework */; };
 		1B327D271995B5E10089E5BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B327D261995B5E10089E5BA /* UIKit.framework */; };
@@ -48,6 +54,12 @@
 
 /* Begin PBXFileReference section */
 		1B0846B91995E7FD0055CDCE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1B0846BD1995EB650055CDCE /* SPTListTabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTListTabIcon.png; sourceTree = "<group>"; };
+		1B0846BE1995EB650055CDCE /* SPTListTabIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTListTabIcon@2x.png"; sourceTree = "<group>"; };
+		1B0846BF1995EB650055CDCE /* SPTMapTabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTMapTabIcon.png; sourceTree = "<group>"; };
+		1B0846C01995EB650055CDCE /* SPTMapTabIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTMapTabIcon@2x.png"; sourceTree = "<group>"; };
+		1B0846C11995EB650055CDCE /* SPTProfileTabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPTProfileTabIcon.png; sourceTree = "<group>"; };
+		1B0846C21995EB650055CDCE /* SPTProfileTabIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPTProfileTabIcon@2x.png"; sourceTree = "<group>"; };
 		1B327D1F1995B5E10089E5BA /* Spottr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spottr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B327D221995B5E10089E5BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B327D241995B5E10089E5BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +126,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B0846BB1995EB650055CDCE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B0846BC1995EB650055CDCE /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1B0846BC1995EB650055CDCE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1B0846BD1995EB650055CDCE /* SPTListTabIcon.png */,
+				1B0846BE1995EB650055CDCE /* SPTListTabIcon@2x.png */,
+				1B0846BF1995EB650055CDCE /* SPTMapTabIcon.png */,
+				1B0846C01995EB650055CDCE /* SPTMapTabIcon@2x.png */,
+				1B0846C11995EB650055CDCE /* SPTProfileTabIcon.png */,
+				1B0846C21995EB650055CDCE /* SPTProfileTabIcon@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		1B327D161995B5E10089E5BA = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +183,7 @@
 		1B327D281995B5E10089E5BA /* Spottr */ = {
 			isa = PBXGroup;
 			children = (
+				1B0846BB1995EB650055CDCE /* Resources */,
 				1B327D5B1995BD770089E5BA /* ViewControllers */,
 				1B327D511995B64A0089E5BA /* Categories */,
 				1B327D521995B64A0089E5BA /* CustomViews */,
@@ -387,8 +421,14 @@
 				1B327D8D1995C1190089E5BA /* SPTWorkoutDetailsViewController.xib in Resources */,
 				1B327D6F1995BDFF0089E5BA /* SPTMapViewController.xib in Resources */,
 				1B327D811995BED60089E5BA /* SPTWorkoutListTableViewController.xib in Resources */,
+				1B0846C51995EB650055CDCE /* SPTMapTabIcon.png in Resources */,
+				1B0846C71995EB650055CDCE /* SPTProfileTabIcon.png in Resources */,
+				1B0846C31995EB650055CDCE /* SPTListTabIcon.png in Resources */,
 				1B327D2D1995B5E10089E5BA /* InfoPlist.strings in Resources */,
 				1B327D351995B5E10089E5BA /* Images.xcassets in Resources */,
+				1B0846C61995EB650055CDCE /* SPTMapTabIcon@2x.png in Resources */,
+				1B0846C41995EB650055CDCE /* SPTListTabIcon@2x.png in Resources */,
+				1B0846C81995EB650055CDCE /* SPTProfileTabIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

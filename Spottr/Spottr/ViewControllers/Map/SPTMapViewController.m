@@ -7,8 +7,10 @@
 //
 
 #import "SPTMapViewController.h"
+#import <MapKit/MapKit.h>
 
 @interface SPTMapViewController ()
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
