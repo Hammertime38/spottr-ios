@@ -24,7 +24,7 @@
 @property (nonatomic, copy) NSString *workoutDescription;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) NSUInteger capacity;
-@property (nonatomic, assign) NSUInteger numUsersJoined;
+@property (nonatomic, assign, readonly) NSUInteger numUsersJoined;
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, assign) double longitude;
 

@@ -14,6 +14,7 @@
 @property (nonatomic) PFObject *backingParseObject;
 @property (nonatomic) PFObject *createdByUser;
 @property (nonatomic) NSString *objectId;
+@property (nonatomic, assign, readwrite) NSUInteger numUsersJoined;
 @end
 
 @implementation SPTWorkout
@@ -37,12 +38,12 @@
     instance->_name = [parseObject objectForKey:@"name"];
     instance->_workoutDescription = [parseObject objectForKey:@"description"];
     instance->_capacity = [[parseObject objectForKey:@"capacity"] unsignedIntegerValue];
-    instance->_latitude = [[parseObject objectForKey:@"latidude"] doubleValue];
+    instance->_latitude = [[parseObject objectForKey:@"latitude"] doubleValue];
     instance->_longitude = [[parseObject objectForKey:@"longitude"] doubleValue];
     instance->_backingParseObject = parseObject;
     instance->_createdByUser = [parseObject objectForKey:@"createdBy"];
+    instance->_numUsersJoined = [[parseObject objectForKey:@"numUsersJoined"] unsignedIntegerValue];
 
-    // TODO -- inspect pointer from joined users
     return instance;
 }
 
@@ -62,6 +63,7 @@
     if (![backingParseObject objectForKey:@"createdBy"]) {
         [backingParseObject setObject:[PFUser currentUser] forKey:@"createdBy"];
         [[backingParseObject relationForKey:@"joinedUsers"] addObject:[PFUser currentUser]];
+        [backingParseObject setObject:@1 forKey:@"numJoinedUsers"];
     }
     [backingParseObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -78,8 +80,12 @@
     }
 
     [[[self.backingParseObject relationForKey:@"joinedParseUsers"] query] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (![objects containsObject:[PFUser currentUser]])
+        if (![objects containsObject:[PFUser currentUser]]) {
             [[self.backingParseObject relationForKey:@"joinedParseUsers"] addObject:[PFUser currentUser]];
+            [[self.backingParseObject relationForKey:@"joinedUsers"] addObject:[PFUser currentUser]];
+            NSNumber *numJoinedUsers = [self.backingParseObject objectForKey:@"numJoinedUsers"];
+            [self.backingParseObject setObject:@(numJoinedUsers.unsignedIntegerValue+1) forKey:@"numJoinedUsers"];
+        }
         [self.backingParseObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (completion) completion(nil, nil);

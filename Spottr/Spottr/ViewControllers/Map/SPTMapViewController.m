@@ -8,7 +8,9 @@
 
 #import "SPTMapViewController.h"
 #import <MapKit/MapKit.h>
+#import <Parse/Parse.h>
 #import "SPTCreateWorkoutTableViewController.h"
+#import "SPTWorkout.h"
 
 @interface SPTMapViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -23,6 +25,16 @@
 
     UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewWorkoutTapped:)];
     [self.navigationItem setRightBarButtonItem:addBarButtonItem];
+
+    PFQuery *query = [PFQuery queryWithClassName:@"Workout"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        for (PFObject *object in objects) {
+            SPTWorkout *workout = [SPTWorkout workoutWithParseObject:object];
+            NSLog(@"created workout");
+        }
+        NSLog(@"Derp");
+
+    }];
 }
 
 - (void)addNewWorkoutTapped:(id)sender
