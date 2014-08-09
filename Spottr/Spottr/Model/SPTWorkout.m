@@ -76,6 +76,11 @@
         [backingParseObject setObject:@1 forKey:@"numUsersJoined"];
         [backingParseObject setObject:[[PFUser currentUser] objectForKey:@"firstName"] forKey:@"createdByFirstName"];
         [backingParseObject setObject:[[PFUser currentUser] objectForKey:@"lastName"] forKey:@"createdByLastName"];
+
+        PFFile *userImageFile = [[PFUser currentUser] objectForKey:@"userPhoto"];
+        if (userImageFile) {
+            [backingParseObject setObject:userImageFile forKey:@"createdByImage"];
+        }
     }
     [backingParseObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
