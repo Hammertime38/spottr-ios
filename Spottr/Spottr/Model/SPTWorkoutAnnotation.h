@@ -12,4 +12,5 @@
 @class SPTWorkout;
 @interface SPTWorkoutAnnotation : NSObject <MKAnnotation>
 + (SPTWorkoutAnnotation *)annotationWithWorkout:(SPTWorkout *)workout;
+@property (nonatomic, readonly) SPTWorkout *workout;
 @end

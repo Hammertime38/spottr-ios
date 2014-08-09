@@ -12,6 +12,7 @@
 #import "SPTCreateWorkoutController.h"
 #import "SPTWorkout.h"
 #import "SPTWorkoutAnnotation.h"
+#import <objc/runtime.h>
 
 @interface SPTMapViewController () <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -73,6 +74,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+static const char kHackyButtonAnnotationKey;
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
     if (![annotation isKindOfClass:[SPTWorkoutAnnotation class]])
@@ -84,19 +86,29 @@
         [annotationView setAnnotation:annotation];
     } else {
         annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:kWorkoutAnnotationIdentifier];
-        UIButton *calloutAccessoryButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        [annotationView setRightCalloutAccessoryView:calloutAccessoryButton];
         [annotationView setImage:[UIImage imageNamed:@"SPTMapAnnotationIcon"]];
         [annotationView setCanShowCallout:YES];
     }
+
+    UIButton *calloutAccessoryButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [calloutAccessoryButton addTarget:self action:@selector(didTapCalloutAccessory:) forControlEvents:UIControlEventTouchUpInside];
+    [annotationView setRightCalloutAccessoryView:calloutAccessoryButton];
+    objc_setAssociatedObject(calloutAccessoryButton, &kHackyButtonAnnotationKey, annotation, OBJC_ASSOCIATION_ASSIGN);
     return annotationView;
 }
 
+- (void)didTapCalloutAccessory:(UIButton *)sender
+{
+    SPTWorkoutAnnotation *annotation = objc_getAssociatedObject(sender, &kHackyButtonAnnotationKey);
+}
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
-    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
+        [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    });
 }
 
 
